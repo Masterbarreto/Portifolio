@@ -1,3 +1,22 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "guarda-meu-lanche",
+      "description": "App de otimização de compras em lanchonete escolar.",
+      "imageUrl": "https://picsum.photos/seed/guarda-meu-lanche/600/400",
+      "imageHint": "mobile app food"
+    },
+    {
+      "id": "seguidor-de-linha",
+      "description": "Protótipo em C++ com sensores para competição de robótica.",
+      "imageUrl": "https://picsum.photos/seed/seguidor-de-linha/600/400",
+      "imageHint": "robot line"
+    },
+    {
+      "id": "bots-ia-whatsapp",
+      "description": "Experimentos com automação de atendimento via WhatsApp.",
+      "imageUrl": "https://picsum.photos/seed/bots-ia-whatsapp/600/400",
+      "imageHint": "chat bubbles"
+    }
+  ]
 }
