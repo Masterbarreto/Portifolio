@@ -40,32 +40,36 @@ export default function Home() {
       <section className="mt-24 md:mt-32">
         <h2 className="text-3xl font-bold text-center mb-10">Destaques</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          <Card className="border-primary/20 hover:border-primary transition-all duration-300 transform hover:scale-105">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-3">
-                <Briefcase className="text-primary"/>
-                Experiência na Yamamotto
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground">
-                Estágio focado em integrações de APIs, automação de fluxos com webhooks, e prototipagem de agentes de IA para atendimento ao cliente.
-              </p>
-            </CardContent>
-          </Card>
-          <Card className="border-primary/20 hover:border-primary transition-all duration-300 transform hover:scale-105">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
-                Formação no Senac
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground">
-                Técnico em IoT, com uma base sólida em hardware, redes e programação, e participação ativa em projetos de inovação e competições.
-              </p>
-            </CardContent>
-          </Card>
+          <Link href="/about">
+            <Card className="border-primary/20 hover:border-primary transition-all duration-300 transform hover:scale-105 h-full">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-3">
+                  <Briefcase className="text-primary"/>
+                  Experiência na Yamamotto
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Estágio focado em integrações de APIs, automação de fluxos com webhooks, e prototipagem de agentes de IA para atendimento ao cliente.
+                </p>
+              </CardContent>
+            </Card>
+          </Link>
+          <Link href="/about">
+            <Card className="border-primary/20 hover:border-primary transition-all duration-300 transform hover:scale-105 h-full">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+                  Formação no Senac
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Técnico em IoT, com uma base sólida em hardware, redes e programação, e participação ativa em projetos de inovação e competições.
+                </p>
+              </CardContent>
+            </Card>
+          </Link>
         </div>
       </section>
     </div>

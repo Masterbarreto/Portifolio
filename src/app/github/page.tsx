@@ -1,8 +1,8 @@
-import ContributionHeatmap from "@/components/contribution-heatmap";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { BookMarked, GitFork, Star } from "lucide-react";
 import type { Metadata } from 'next';
 import Link from "next/link";
+import ContributionHeatmap from "@/components/contribution-heatmap";
 
 export const metadata: Metadata = {
   title: 'GitHub | MasterDev Portfolio',
@@ -16,7 +16,7 @@ const PinnedRepos = [
         language: 'TypeScript',
         stars: 42,
         forks: 8,
-        url: '#'
+        url: 'https://github.com/MasterBarreto/Guarda-Meu-Lanche'
     },
     {
         name: 'portfolio-nextjs',
@@ -24,7 +24,7 @@ const PinnedRepos = [
         language: 'TypeScript',
         stars: 73,
         forks: 12,
-        url: '#'
+        url: 'https://github.com/MasterBarreto/portfolio-nextjs'
     },
     {
         name: 'bots-ia-whatsapp',
@@ -32,7 +32,7 @@ const PinnedRepos = [
         language: 'JavaScript',
         stars: 31,
         forks: 5,
-        url: '#'
+        url: 'https://github.com/MasterBarreto/whatsapp-bots'
     }
 ]
 
