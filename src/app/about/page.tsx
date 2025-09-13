@@ -43,7 +43,7 @@ export default function AboutPage() {
     <div className="container mx-auto px-4 py-16 md:py-24">
       <div className="text-center">
         <Image
-            src="/profile.jpg"
+            src="https://picsum.photos/seed/profile/120/120"
             alt="Pedro Henrique Vieira Barreto"
             width={120}
             height={120}
