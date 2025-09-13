@@ -1,10 +1,11 @@
-import type { Skill, Project, TimelineEvent } from './types';
+import type { Skill, Project, TimelineEvent, Certificate } from './types';
 
 export const NAV_LINKS = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'Sobre Mim' },
   { href: '/projects', label: 'Projetos' },
   { href: '/skills', label: 'Skills' },
+  { href: '/certifications', label: 'Certificados' },
   { href: '/github', label: 'GitHub' },
   { href: '/contact', label: 'Contato' },
 ];
@@ -95,4 +96,60 @@ export const TIMELINE: TimelineEvent[] = [
         institution: 'Robótica, Teatro, Oficina de Foguetes',
         description: 'Engajamento em diversas atividades que estimularam a criatividade, o trabalho em equipe e a aplicação prática de conhecimentos técnicos.',
     }
+];
+
+export const CERTIFICATIONS: Certificate[] = [
+  {
+    title: 'NLW Agents - Avançado',
+    issuer: 'Rocketseat',
+    date: 'Jul de 2025',
+    credentialUrl: '#'
+  },
+  {
+    title: 'Database Foundations',
+    issuer: 'Oracle',
+    date: 'Jun de 2025',
+    credentialUrl: '#'
+  },
+  {
+    title: 'Fundamentos de Banco de Dados',
+    issuer: 'Senac São Paulo',
+    date: 'Jun de 2025',
+  },
+  {
+    title: 'AWS Educate Introduction to Generative AI',
+    issuer: 'Amazon Web Services (AWS)',
+    date: 'Mar de 2025',
+    credentialUrl: '#'
+  },
+  {
+    title: 'NLW Pocket: Mobile - React Native',
+    issuer: 'Rocketseat',
+    date: 'Dez de 2024',
+    credentialUrl: '#'
+  },
+  {
+    title: 'NLW Pocket: Javascript - Full-stack Intermediário',
+    issuer: 'Rocketseat',
+    date: 'Set de 2024',
+    credentialUrl: '#'
+  },
+  {
+    title: 'Empreendedorismo Tecnológico',
+    issuer: 'Samsung Ocean',
+    date: 'Ago de 2024',
+    credentialUrl: '#'
+  },
+  {
+    title: 'Introdução a Teste com Remote Test Lab',
+    issuer: 'Samsung Ocean',
+    date: 'Ago de 2024',
+    credentialUrl: '#'
+  },
+  {
+    title: 'UX/UI Design',
+    issuer: 'Grupo Voitto',
+    date: 'Jul de 2024',
+    credentialUrl: '#'
+  }
 ];

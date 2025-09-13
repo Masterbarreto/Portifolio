@@ -21,5 +21,12 @@ export interface TimelineEvent {
   year: string;
   title: string;
   institution: string;
-  description: string;
+  description:string;
+}
+
+export interface Certificate {
+  title: string;
+  issuer: string;
+  date: string;
+  credentialUrl?: string;
 }
