@@ -15,12 +15,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
 
 
 const NavLink = ({ href, label, className, onClick }: { href: string; label: string; className?: string; onClick?: () => void }) => {
@@ -53,11 +47,6 @@ export default function Header() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  const mainLinks = NAV_LINKS.filter(link => !['/skills', '/certifications'].includes(link.href));
-  const moreLinks = NAV_LINKS.filter(link => ['/skills', '/certifications'].includes(link.href));
-  
-  const isMoreActive = moreLinks.some(link => pathname === link.href);
-
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center">
@@ -69,32 +58,9 @@ export default function Header() {
         </div>
 
         <nav className="hidden items-center space-x-6 md:flex">
-          {mainLinks.map((link) => (
+          {NAV_LINKS.map((link) => (
             <NavLink key={link.href} href={link.href} label={link.label} />
           ))}
-
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <button className={cn('group relative flex items-center gap-1 text-sm font-medium text-muted-foreground transition-colors hover:text-primary', isMoreActive && 'text-primary')}>
-                Mais
-                <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
-                 <span
-                    className={cn(
-                    'absolute bottom-[-2px] left-0 h-[2px] w-full bg-primary transition-transform duration-300 scale-x-0 group-hover:scale-x-100',
-                    isMoreActive ? 'scale-x-100' : 'scale-x-0'
-                    )}
-                />
-              </button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              {moreLinks.map((link) => (
-                <DropdownMenuItem key={link.href} asChild>
-                  <Link href={link.href}>{link.label}</Link>
-                </DropdownMenuItem>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
-
         </nav>
 
         <div className="flex flex-1 items-center justify-end space-x-4">

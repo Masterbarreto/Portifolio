@@ -1,8 +1,11 @@
 import Timeline from "@/components/timeline";
-import { TIMELINE } from "@/lib/data";
-import { Award, Code, Drama, Rocket, BrainCircuit } from 'lucide-react';
+import { TIMELINE, CERTIFICATIONS } from "@/lib/data";
+import { Award, Code, Drama, Rocket, BrainCircuit, Building, Calendar, ExternalLink } from 'lucide-react';
 import type { Metadata } from 'next';
 import Image from "next/image";
+import { Card, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: 'Sobre Mim | MasterDev Portfolio',
@@ -73,6 +76,40 @@ export default function AboutPage() {
                 Além da programação, meu tempo é preenchido com atividades que desafiam minha criatividade e lógica, desde competições de robótica e programação (OBI, OBA) até o palco do teatro.
             </p>
             <HobbiesSection />
+        </div>
+      </section>
+      
+      <section className="mt-20">
+        <h2 className="text-3xl font-bold text-center mb-10">Licenças e Certificados</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {CERTIFICATIONS.map((cert, index) => (
+                <Card key={index} className="flex flex-col h-full hover:border-primary transition-colors">
+                    <CardHeader>
+                        <CardTitle className="flex items-start gap-3 font-headline text-xl">
+                           <Award className="h-6 w-6 text-primary flex-shrink-0 mt-1"/> 
+                           {cert.title}
+                        </CardTitle>
+                        <CardDescription className="flex flex-col gap-2 pt-2">
+                           <span className="flex items-center gap-2 text-sm">
+                               <Building className="h-4 w-4"/> {cert.issuer}
+                           </span>
+                           <span className="flex items-center gap-2 text-sm">
+                               <Calendar className="h-4 w-4"/> {cert.date}
+                           </span>
+                        </CardDescription>
+                    </CardHeader>
+                    {cert.credentialUrl && (
+                        <CardFooter className="mt-auto">
+                           <Button asChild variant="outline" className="w-full">
+                                <Link href={cert.credentialUrl} target="_blank">
+                                    <ExternalLink className="mr-2 h-4 w-4"/>
+                                    Exibir Credencial
+                                </Link>
+                           </Button>
+                        </CardFooter>
+                    )}
+                </Card>
+            ))}
         </div>
       </section>
 

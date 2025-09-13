@@ -7,7 +7,6 @@ export const NAV_LINKS = [
   { href: '/blog', label: 'Blog' },
   { href: '/contact', label: 'Contato' },
   { href: '/skills', label: 'Skills' },
-  { href: '/certifications', label: 'Certificados' },
 ];
 
 export const SKILLS: Skill[] = [
