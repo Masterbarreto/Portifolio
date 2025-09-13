@@ -3,7 +3,7 @@ import type { Skill, SkillCategory } from '@/lib/types';
 import { Badge } from './ui/badge';
 import {
   SiJavascript, SiNodedotjs, SiReact, SiSpringboot, SiCss3, SiHtml5,
-  SiPostgresql, SiMysql, SiMongodb, SiVisualstudiocode, SiGit,
+  SiPostgresql, SiMysql, SiMongodb, SiGit,
   SiGithub, SiFigma, SiDocker, SiGithubactions, SiVercel, SiPython,
 } from 'react-icons/si';
 
@@ -11,7 +11,7 @@ interface SkillsProps {
   skills: Skill[];
 }
 
-const iconMap: { [key: string]: React.ReactElement } = {
+const iconMap: { [key: string]: React.ReactElement | null } = {
   'JavaScript': <SiJavascript className="mr-2" />,
   'Node.js': <SiNodedotjs className="mr-2" />,
   'React.js': <SiReact className="mr-2" />,
@@ -21,7 +21,7 @@ const iconMap: { [key: string]: React.ReactElement } = {
   'PostgreSQL': <SiPostgresql className="mr-2" />,
   'MySQL': <SiMysql className="mr-2" />,
   'MongoDB': <SiMongodb className="mr-2" />,
-  'Visual Studio Code': <SiVisualstudiocode className="mr-2" />,
+  'Visual Studio Code': null,
   'Git': <SiGit className="mr-2" />,
   'GitHub': <SiGithub className="mr-2" />,
   'Figma': <SiFigma className="mr-2" />,
