@@ -30,14 +30,3 @@ export interface Certificate {
   date: string;
   credentialUrl?: string;
 }
-
-export interface BlogPost {
-    id: string;
-    title: string;
-    date: string;
-    summary: string;
-    imageUrl: string;
-    imageHint: string;
-    content: string;
-    links?: { label: string; url: string }[];
-}
