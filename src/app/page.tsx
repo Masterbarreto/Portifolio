@@ -3,8 +3,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Download, Github, Linkedin, Briefcase } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
-import SkillsGrid from '@/components/skills-grid';
 import { SKILLS } from '@/lib/data';
+import Skills from '@/components/skills';
 
 export default function Home() {
   return (
@@ -90,10 +90,10 @@ export default function Home() {
         <div className="text-center">
             <h2 className="text-3xl font-bold mb-4">Habilidades Técnicas</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10">
-            Minha caixa de ferramentas de desenvolvimento. Passe o mouse sobre uma habilidade para ver minha experiência.
+            Minha caixa de ferramentas de desenvolvimento.
             </p>
         </div>
-        <SkillsGrid skills={SKILLS} />
+        <Skills skills={SKILLS} />
       </section>
     </div>
   );

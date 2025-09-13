@@ -9,30 +9,31 @@ export const NAV_LINKS = [
 
 export const SKILLS: Skill[] = [
   // Backend
-  { name: 'Node.js', category: 'Backend', proficiency: 'Experiência principal em APIs REST, integração e automação.' },
-  { name: 'Python', category: 'Backend', proficiency: 'Usado para scripts de automação e projetos de IA.' },
-  { name: 'Spring Boot', category: 'Backend', proficiency: 'Conhecimento básico a intermediário de projetos acadêmicos.' },
+  { name: 'Node.js', category: 'Linguagens e Frameworks', proficiency: 'Experiência principal em APIs REST, integração e automação.' },
+  { name: 'Python', category: 'Linguagens e Frameworks', proficiency: 'Usado para scripts de automação e projetos de IA.' },
+  { name: 'Spring Boot', category: 'Linguagens e Frameworks', proficiency: 'Conhecimento básico a intermediário de projetos acadêmicos.' },
   
   // Frontend
-  { name: 'React.js', category: 'Frontend', proficiency: 'Construção de interfaces para projetos pessoais e acadêmicos.' },
+  { name: 'React.js', category: 'Linguagens e Frameworks', proficiency: 'Construção de interfaces para projetos pessoais e acadêmicos.' },
+  { name: 'JavaScript', category: 'Linguagens e Frameworks', proficiency: 'Linguagem principal para desenvolvimento web.' },
+  { name: 'CSS3', category: 'Linguagens e Frameworks', proficiency: 'Estilização e design de interfaces web.' },
+  { name: 'HTML5', category: 'Linguagens e Frameworks', proficiency: 'Estruturação semântica de páginas web.' },
   
   // Database
-  { name: 'PostgreSQL', category: 'Database', proficiency: 'Banco de dados principal para projetos backend.' },
-  { name: 'MySQL', category: 'Database', proficiency: 'Experiência em ambientes acadêmicos e projetos.' },
-  { name: 'MongoDB', category: 'Database', proficiency: 'Utilizado em projetos que requerem flexibilidade NoSQL.' },
-  { name: 'Oracle DB', category: 'Database', proficiency: 'Fundamentos adquiridos através de certificação e estudos.' },
+  { name: 'PostgreSQL', category: 'Bancos de Dados', proficiency: 'Banco de dados principal para projetos backend.' },
+  { name: 'MySQL', category: 'Bancos de Dados', proficiency: 'Experiência em ambientes acadêmicos e projetos.' },
+  { name: 'MongoDB', category: 'Bancos de Dados', proficiency: 'Utilizado em projetos que requerem flexibilidade NoSQL.' },
   
   // DevOps & Infra
-  { name: 'Docker', category: 'DevOps & Infra', proficiency: 'Containerização de aplicações Node.js para desenvolvimento e deploy.' },
-  { name: 'GitHub Actions', category: 'DevOps & Infra', proficiency: 'Criação de pipelines de CI/CD para automação de testes e deploy.' },
-  { name: 'Firebase', category: 'DevOps & Infra', proficiency: 'Utilizado para hosting e funções serverless em projetos rápidos.' },
-  { name: 'Vercel', category: 'DevOps & Infra', proficiency: 'Deploy de aplicações frontend React/Next.js.' },
-  { name: 'Google Cloud', category: 'DevOps & Infra', proficiency: 'Exploração de serviços de nuvem para projetos de IA e infra.' },
+  { name: 'Docker', category: 'DevOps e CI/CD', proficiency: 'Containerização de aplicações Node.js para desenvolvimento e deploy.' },
+  { name: 'GitHub Actions', category: 'DevOps e CI/CD', proficiency: 'Criação de pipelines de CI/CD para automação de testes e deploy.' },
+  { name: 'Vercel', category: 'DevOps e CI/CD', proficiency: 'Deploy de aplicações frontend React/Next.js.' },
 
-  // Other
-  { name: 'APIs', category: 'Other', proficiency: 'Design e integração de APIs RESTful e webhooks.' },
-  { name: 'UX/UI Design', category: 'Other', proficiency: 'Prototipagem e design de interfaces com foco na experiência do usuário.' },
-  { name: 'Integração de Sistemas', category: 'Other', proficiency: 'Conexão entre CRMs, ERPs e outras plataformas.' },
+  // Ferramentas
+  { name: 'Visual Studio Code', category: 'Ferramentas', proficiency: 'Editor de código principal.' },
+  { name: 'Git', category: 'Ferramentas', proficiency: 'Versionamento de código.' },
+  { name: 'GitHub', category: 'Ferramentas', proficiency: 'Plataforma de colaboração e CI/CD.' },
+  { name: 'Figma', category: 'Ferramentas', proficiency: 'Prototipagem e design de interfaces.' },
 ];
 
 export const PROJECTS: Project[] = [
