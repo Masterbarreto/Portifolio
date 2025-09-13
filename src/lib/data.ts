@@ -4,11 +4,11 @@ export const NAV_LINKS = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'Sobre Mim' },
   { href: '/projects', label: 'Projetos' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/contact', label: 'Contato' },
   { href: '/skills', label: 'Skills' },
   { href: '/certifications', label: 'Certificados' },
   { href: '/github', label: 'GitHub' },
-  { href: '/blog', label: 'Blog' },
-  { href: '/contact', label: 'Contato' },
 ];
 
 export const SKILLS: Skill[] = [
