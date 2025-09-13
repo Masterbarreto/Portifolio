@@ -2,11 +2,22 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Download, Github, Linkedin, Briefcase } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   return (
     <div className="container mx-auto px-4 py-16 md:py-24">
       <section className="text-center">
+        <div className="flex justify-center mb-8">
+            <Image
+                src="/profile.jpg"
+                alt="Pedro Henrique Vieira Barreto"
+                width={150}
+                height={150}
+                className="rounded-full object-cover border-4 border-primary/20 shadow-lg"
+                priority
+            />
+        </div>
         <h1 className="text-4xl md:text-6xl font-bold mb-4 tracking-tighter">
           Pedro Henrique Vieira Barreto
         </h1>

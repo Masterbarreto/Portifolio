@@ -2,6 +2,7 @@ import Timeline from "@/components/timeline";
 import { TIMELINE } from "@/lib/data";
 import { Award, Code, Drama, Rocket, BrainCircuit } from 'lucide-react';
 import type { Metadata } from 'next';
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: 'Sobre Mim | MasterDev Portfolio',
@@ -40,7 +41,16 @@ const HobbiesSection = () => (
 export default function AboutPage() {
   return (
     <div className="container mx-auto px-4 py-16 md:py-24">
-      <h1 className="text-4xl md:text-5xl font-bold text-center mb-12">Sobre Mim</h1>
+      <div className="text-center">
+        <Image
+            src="/profile.jpg"
+            alt="Pedro Henrique Vieira Barreto"
+            width={120}
+            height={120}
+            className="rounded-full object-cover border-4 border-primary/20 shadow-lg mx-auto mb-6"
+        />
+        <h1 className="text-4xl md:text-5xl font-bold mb-12">Sobre Mim</h1>
+      </div>
       
       <div className="max-w-3xl mx-auto space-y-8 text-lg text-muted-foreground">
         <p>
