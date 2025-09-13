@@ -7,6 +7,7 @@ export const NAV_LINKS = [
   { href: '/skills', label: 'Skills' },
   { href: '/certifications', label: 'Certificados' },
   { href: '/github', label: 'GitHub' },
+  { href: '/blog', label: 'Blog' },
   { href: '/contact', label: 'Contato' },
 ];
 
@@ -103,7 +104,7 @@ export const CERTIFICATIONS: Certificate[] = [
     title: 'NLW Agents - Avançado',
     issuer: 'Rocketseat',
     date: 'Jul de 2025',
-    credentialUrl: '#'
+    credentialUrl: 'https://app.rocketseat.com.br/certificates/8adbd58b-fae6-4ddb-9e49-600c44333046'
   },
   {
     title: 'Database Foundations',
@@ -126,30 +127,30 @@ export const CERTIFICATIONS: Certificate[] = [
     title: 'NLW Pocket: Mobile - React Native',
     issuer: 'Rocketseat',
     date: 'Dez de 2024',
-    credentialUrl: '#'
+    credentialUrl: 'https://app.rocketseat.com.br/certificates/d07f404c-8107-4c14-a885-37a09d2d6266'
   },
   {
     title: 'NLW Pocket: Javascript - Full-stack Intermediário',
     issuer: 'Rocketseat',
     date: 'Set de 2024',
-    credentialUrl: '#'
+    credentialUrl: 'https://app.rocketseat.com.br/certificates/13dbdef1-771f-4d8b-bb6f-6abb06f2fdca'
   },
   {
-    title: 'Empreendedorismo Tecnológico',
+    title: 'Empreendedorismo Tecnológico: Startups de Base Tecnológica',
     issuer: 'Samsung Ocean',
     date: 'Ago de 2024',
-    credentialUrl: '#'
+    credentialUrl: 'https://www.samsungocean.com/certificates/clzni0bcq0000l708ccqil60m_4346'
   },
   {
-    title: 'Introdução a Teste com Remote Test Lab',
+    title: 'Introdução a Teste com ênfase no Remote Test Lab',
     issuer: 'Samsung Ocean',
     date: 'Ago de 2024',
-    credentialUrl: '#'
+    credentialUrl: 'https://www.samsungocean.com/certificates/cm0lc3s7y000pl608micmrsq3_5268'
   },
   {
     title: 'UX/UI Design',
     issuer: 'Grupo Voitto',
     date: 'Jul de 2024',
-    credentialUrl: '#'
+    credentialUrl: 'https://www.voitto.com.br/certificado/UkE9NTI3OCtSQj02Mzg0NTQ='
   }
 ];
