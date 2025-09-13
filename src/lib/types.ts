@@ -4,6 +4,7 @@ export interface Skill {
   name: string;
   category: SkillCategory;
   proficiency: string; // e.g., "Advanced", "Intermediate", "Familiar"
+  icon: string;
 }
 
 export interface Project {

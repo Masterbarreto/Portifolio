@@ -9,31 +9,31 @@ export const NAV_LINKS = [
 
 export const SKILLS: Skill[] = [
   // Backend
-  { name: 'Node.js', category: 'Linguagens e Frameworks', proficiency: 'Experiência principal em APIs REST, integração e automação.' },
-  { name: 'Python', category: 'Linguagens e Frameworks', proficiency: 'Usado para scripts de automação e projetos de IA.' },
-  { name: 'Spring Boot', category: 'Linguagens e Frameworks', proficiency: 'Conhecimento básico a intermediário de projetos acadêmicos.' },
+  { name: 'Node.js', category: 'Linguagens e Frameworks', proficiency: 'Experiência principal em APIs REST, integração e automação.', icon: 'SiNodedotjs' },
+  { name: 'Python', category: 'Linguagens e Frameworks', proficiency: 'Usado para scripts de automação e projetos de IA.', icon: 'SiPython' },
+  { name: 'Spring Boot', category: 'Linguagens e Frameworks', proficiency: 'Conhecimento básico a intermediário de projetos acadêmicos.', icon: 'SiSpringboot' },
   
   // Frontend
-  { name: 'React.js', category: 'Linguagens e Frameworks', proficiency: 'Construção de interfaces para projetos pessoais e acadêmicos.' },
-  { name: 'JavaScript', category: 'Linguagens e Frameworks', proficiency: 'Linguagem principal para desenvolvimento web.' },
-  { name: 'CSS3', category: 'Linguagens e Frameworks', proficiency: 'Estilização e design de interfaces web.' },
-  { name: 'HTML5', category: 'Linguagens e Frameworks', proficiency: 'Estruturação semântica de páginas web.' },
+  { name: 'React.js', category: 'Linguagens e Frameworks', proficiency: 'Construção de interfaces para projetos pessoais e acadêmicos.', icon: 'SiReact' },
+  { name: 'JavaScript', category: 'Linguagens e Frameworks', proficiency: 'Linguagem principal para desenvolvimento web.', icon: 'SiJavascript' },
+  { name: 'CSS3', category: 'Linguagens e Frameworks', proficiency: 'Estilização e design de interfaces web.', icon: 'SiCss3' },
+  { name: 'HTML5', category: 'Linguagens e Frameworks', proficiency: 'Estruturação semântica de páginas web.', icon: 'SiHtml5' },
   
   // Database
-  { name: 'PostgreSQL', category: 'Bancos de Dados', proficiency: 'Banco de dados principal para projetos backend.' },
-  { name: 'MySQL', category: 'Bancos de Dados', proficiency: 'Experiência em ambientes acadêmicos e projetos.' },
-  { name: 'MongoDB', category: 'Bancos de Dados', proficiency: 'Utilizado em projetos que requerem flexibilidade NoSQL.' },
+  { name: 'PostgreSQL', category: 'Bancos de Dados', proficiency: 'Banco de dados principal para projetos backend.', icon: 'SiPostgresql' },
+  { name: 'MySQL', category: 'Bancos de Dados', proficiency: 'Experiência em ambientes acadêmicos e projetos.', icon: 'SiMysql' },
+  { name: 'MongoDB', category: 'Bancos de Dados', proficiency: 'Utilizado em projetos que requerem flexibilidade NoSQL.', icon: 'SiMongodb' },
   
   // DevOps & Infra
-  { name: 'Docker', category: 'DevOps e CI/CD', proficiency: 'Containerização de aplicações Node.js para desenvolvimento e deploy.' },
-  { name: 'GitHub Actions', category: 'DevOps e CI/CD', proficiency: 'Criação de pipelines de CI/CD para automação de testes e deploy.' },
-  { name: 'Vercel', category: 'DevOps e CI/CD', proficiency: 'Deploy de aplicações frontend React/Next.js.' },
+  { name: 'Docker', category: 'DevOps e CI/CD', proficiency: 'Containerização de aplicações Node.js para desenvolvimento e deploy.', icon: 'SiDocker' },
+  { name: 'GitHub Actions', category: 'DevOps e CI/CD', proficiency: 'Criação de pipelines de CI/CD para automação de testes e deploy.', icon: 'SiGithubactions' },
+  { name: 'Vercel', category: 'DevOps e CI/CD', proficiency: 'Deploy de aplicações frontend React/Next.js.', icon: 'SiVercel' },
 
   // Ferramentas
-  { name: 'Visual Studio Code', category: 'Ferramentas', proficiency: 'Editor de código principal.' },
-  { name: 'Git', category: 'Ferramentas', proficiency: 'Versionamento de código.' },
-  { name: 'GitHub', category: 'Ferramentas', proficiency: 'Plataforma de colaboração e CI/CD.' },
-  { name: 'Figma', category: 'Ferramentas', proficiency: 'Prototipagem e design de interfaces.' },
+  { name: 'Visual Studio Code', category: 'Ferramentas', proficiency: 'Editor de código principal.', icon: 'SiVisualstudiocode' },
+  { name: 'Git', category: 'Ferramentas', proficiency: 'Versionamento de código.', icon: 'SiGit' },
+  { name: 'GitHub', category: 'Ferramentas', proficiency: 'Plataforma de colaboração e CI/CD.', icon: 'SiGithub' },
+  { name: 'Figma', category: 'Ferramentas', proficiency: 'Prototipagem e design de interfaces.', icon: 'SiFigma' },
 ];
 
 export const PROJECTS: Project[] = [
@@ -41,7 +41,7 @@ export const PROJECTS: Project[] = [
     id: 'guarda-meu-lanche',
     title: 'Guarda Meu Lanche',
     description: 'App de otimização de compras em lanchonete escolar.',
-    longDescription: 'O "Guarda Meu Lanche" foi um projeto desenvolvido entre 2023 e 2025 para resolver o problema das longas filas e da gestão de pedidos na lanchonete da escola. A solução envolve um backend robusto que gerencia usuários, produtos e pedidos, otimizando o fluxo e permitindo que os alunos comprem com antecedência. O projeto recebeu mentoria no Centro de Inovação Tecnológica do SENAC.',
+    longDescription: 'Desenvolvimento de um aplicativo para otimizar o tempo dos alunos nas filas das lanchonetes. O projeto envolveu gerenciamento, arquitetura, criação de regras de serviço, implementação de APIs, uso de banco de dados PostgreSQL, conteinerização com Docker e design de UX/UI. Recebeu mentoria do Centro de Inovação Tecnológica do SENAC.',
     stack: ['Node.js', 'PostgreSQL', 'REST API', 'Docker', 'UX/UI Design'],
     imageUrl: 'https://picsum.photos/seed/guarda-meu-lanche/600/400',
     imageHint: 'mobile app food',
@@ -71,25 +71,25 @@ export const PROJECTS: Project[] = [
 
 export const TIMELINE: TimelineEvent[] = [
     {
-        year: '2025 - Atual',
+        year: 'Ago 2025 - Atual',
         title: 'Estagiário de Backend',
-        institution: 'Yamamotto',
-        description: 'Foco em integrações de APIs (CRM, ERP), automação com webhooks e prototipagem de agentes de IA para atendimento.',
+        institution: 'Yamamoto',
+        description: 'Desenvolvimento de integrações de APIs, automação de fluxos com webhooks e prototipagem de agentes de IA para atendimento.',
+    },
+    {
+        year: '2023 - 2026',
+        title: 'Ensino Médio Técnico em IoT',
+        institution: 'Senac São Paulo',
+        description: 'Formação em T.I. passando por hardware (1º ano), redes (2º ano) e programação (3º ano). Atividades: Teatro, robótica, oficina de foguetes, GML.',
+    },
+    {
+        year: '2025',
+        title: 'Participação em Olimpíadas',
+        institution: 'OBI, OBA & MOBFOG',
+        description: 'Participação na Olimpíada Brasileira de Informática (OBI), na Olimpíada Brasileira de Astronomia e Astronáutica (OBA) e na Mostra Brasileira de Foguetes (MOBFOG).',
     },
     {
         year: '2023 - 2025',
-        title: 'Técnico em Internet das Coisas (IoT)',
-        institution: 'SENAC',
-        description: 'Formação completa passando por hardware (1º ano), redes (2º ano) e programação (3º ano), com ênfase em projetos práticos.',
-    },
-    {
-        year: '2024',
-        title: 'Participação em Olimpíadas',
-        institution: 'OBI & OBA',
-        description: 'Participação na Olimpíada Brasileira de Informática (OBI) e na Olimpíada Brasileira de Astronomia e Astronáutica (OBA), desenvolvendo habilidades de lógica e resolução de problemas.',
-    },
-    {
-        year: '2023',
         title: 'Atividades Extracurriculares',
         institution: 'Robótica, Teatro, Oficina de Foguetes',
         description: 'Engajamento em diversas atividades que estimularam a criatividade, o trabalho em equipe e a aplicação prática de conhecimentos técnicos.',
@@ -106,8 +106,7 @@ export const CERTIFICATIONS: Certificate[] = [
   {
     title: 'Database Foundations',
     issuer: 'Oracle',
-    date: 'Jun de 2025',
-    credentialUrl: '#'
+    date: 'Jun de 2025'
   },
   {
     title: 'Fundamentos de Banco de Dados',
@@ -117,8 +116,7 @@ export const CERTIFICATIONS: Certificate[] = [
   {
     title: 'AWS Educate Introduction to Generative AI',
     issuer: 'Amazon Web Services (AWS)',
-    date: 'Mar de 2025',
-    credentialUrl: '#'
+    date: 'Mar de 2025'
   },
   {
     title: 'NLW Pocket: Mobile - React Native',
