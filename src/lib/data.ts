@@ -5,7 +5,6 @@ export const NAV_LINKS = [
   { href: '/about', label: 'Sobre Mim' },
   { href: '/projects', label: 'Projetos' },
   { href: '/contact', label: 'Contato' },
-  { href: '/skills', label: 'Skills' },
 ];
 
 export const SKILLS: Skill[] = [

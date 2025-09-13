@@ -2,7 +2,7 @@
 
 import { NAV_LINKS } from '@/lib/data';
 import { cn } from '@/lib/utils';
-import { Menu, Code, ChevronDown } from 'lucide-react';
+import { Menu, Code } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
@@ -45,7 +45,6 @@ const NavLink = ({ href, label, className, onClick }: { href: string; label: str
 
 export default function Header() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const pathname = usePathname();
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
