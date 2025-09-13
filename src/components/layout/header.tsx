@@ -53,8 +53,8 @@ export default function Header() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  const mainLinks = NAV_LINKS.filter(link => !['/skills', '/certifications', '/github'].includes(link.href));
-  const moreLinks = NAV_LINKS.filter(link => ['/skills', '/certifications', '/github'].includes(link.href));
+  const mainLinks = NAV_LINKS.filter(link => !['/skills', '/certifications'].includes(link.href));
+  const moreLinks = NAV_LINKS.filter(link => ['/skills', '/certifications'].includes(link.href));
   
   const isMoreActive = moreLinks.some(link => pathname === link.href);
 

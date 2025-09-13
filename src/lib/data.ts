@@ -8,7 +8,6 @@ export const NAV_LINKS = [
   { href: '/contact', label: 'Contato' },
   { href: '/skills', label: 'Skills' },
   { href: '/certifications', label: 'Certificados' },
-  { href: '/github', label: 'GitHub' },
 ];
 
 export const SKILLS: Skill[] = [
