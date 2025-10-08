@@ -12,7 +12,7 @@ export default function Home() {
       <section className="text-center">
         <div className="flex justify-center mb-8">
             <Image
-                src="https://picsum.photos/seed/profile/150/150"
+                src="https://picsum.photos/seed/avatar/150/150"
                 alt="Pedro Henrique Vieira Barreto"
                 width={150}
                 height={150}
