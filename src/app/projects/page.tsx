@@ -1,4 +1,3 @@
-import AiTool from "@/components/ai-tool";
 import ContributionHeatmap from "@/components/contribution-heatmap";
 import ProjectCard from "@/components/project-card";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -92,14 +91,6 @@ export default function ProjectsPage() {
         <Card className="p-4 md:p-6">
             <ContributionHeatmap />
         </Card>
-      </section>
-
-      <section className="mt-20 max-w-3xl mx-auto">
-        <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold">Ferramenta de IA</h2>
-            <p className="text-muted-foreground mt-2">Gere tags e um resumo para a descrição do seu projeto usando IA.</p>
-        </div>
-        <AiTool />
       </section>
     </div>
   );
