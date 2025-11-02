@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent, CardDescription, CardFooter }
 import type { Metadata, ResolvingMetadata } from 'next'
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Github, Bot } from "lucide-react";
+import { Github, Bot, ArrowRight } from "lucide-react";
  
 type Props = {
   params: { slug: string }
@@ -74,29 +74,29 @@ export default function MateriaPage({ params }: { params: { slug: string } }) {
 
             {params.slug === 'iot' && iotProject && (
                 <section className="mt-12 max-w-3xl mx-auto">
-                    <Card>
-                        <CardHeader>
-                            <CardTitle className="flex items-center gap-3">
-                                <Bot className="h-6 w-6 text-primary" />
-                                Atividade Prática em Destaque
-                            </CardTitle>
-                            <CardDescription>
-                                Exemplo de projeto prático desenvolvido na área de IoT.
-                            </CardDescription>
-                        </CardHeader>
-                        <CardContent>
-                            <h4 className="font-bold text-lg">{iotProject.title}</h4>
-                            <p className="text-muted-foreground text-sm mt-1">{iotProject.longDescription}</p>
-                        </CardContent>
-                        <CardFooter>
-                            <Button asChild variant="outline" className="w-full">
-                                <Link href={iotProject.githubUrl} target="_blank">
-                                    <Github className="mr-2 h-4 w-4" />
-                                    Ver no GitHub
-                                </Link>
-                            </Button>
-                        </CardFooter>
-                    </Card>
+                   <Link href={`/projects/${iotProject.id}`}>
+                        <Card className="h-full hover:border-primary transition-colors">
+                            <CardHeader>
+                                <CardTitle className="flex items-center gap-3">
+                                    <Bot className="h-6 w-6 text-primary" />
+                                    Atividade Prática em Destaque
+                                </CardTitle>
+                                <CardDescription>
+                                    Exemplo de projeto prático desenvolvido na área de IoT.
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent>
+                                <h4 className="font-bold text-lg">{iotProject.title}</h4>
+                                <p className="text-muted-foreground text-sm mt-1 line-clamp-3">{iotProject.longDescription}</p>
+                            </CardContent>
+                            <CardFooter>
+                                <p className="text-sm text-primary font-semibold w-full flex items-center">
+                                    Ver detalhes da atividade
+                                    <ArrowRight className="ml-2 h-4 w-4" />
+                                </p>
+                            </CardFooter>
+                        </Card>
+                    </Link>
                 </section>
             )}
         </div>
