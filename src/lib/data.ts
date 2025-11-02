@@ -107,8 +107,8 @@ export const PROJECTS: Project[] = [
     description: 'Protótipo em C++ com sensores para competição de robótica.',
     longDescription: 'Este projeto foi desenvolvido para competições de robótica, onde o desafio era criar um robô autônomo capaz de seguir uma linha preta em uma pista branca. O protótipo foi construído utilizando C++ para a programação do microcontrolador e sensores de infravermelho para a detecção da linha, com foco em otimização de velocidade e precisão.',
     stack: ['C++', 'Hardware', 'Robótica', 'Arduino'],
-    imageUrl: 'https://picsum.photos/seed/seguidor-de-linha/600/400',
-    imageHint: 'robot line',
+    imageUrl: 'https://picsum.photos/seed/real-robot/600/400',
+    imageHint: 'robot car arduino',
     githubUrl: 'https://github.com/MasterBarreto/seguidor-de-linha'
   },
   {

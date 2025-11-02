@@ -3,20 +3,26 @@
     {
       "id": "guarda-meu-lanche",
       "description": "App de otimização de compras em lanchonete escolar.",
-      "imageUrl": "https://picsum.photos/seed/guarda-meu-lanche/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1601972602288-3be527b4f18a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtb2JpbGUlMjBhcHAlMjBmb29kfGVufDB8fHx8MTc2MjA5NzU2Nnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "mobile app food"
     },
     {
       "id": "seguidor-de-linha",
       "description": "Protótipo em C++ com sensores para competição de robótica.",
-      "imageUrl": "https://picsum.photos/seed/seguidor-de-linha/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1641302109114-4ea9e0149e99?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxyb2JvdCUyMGxpbmV8ZW58MHx8fHwxNzYyMDk3NTY2fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "robot line"
     },
     {
       "id": "bots-ia-whatsapp",
       "description": "Experimentos com automação de atendimento via WhatsApp.",
-      "imageUrl": "https://picsum.photos/seed/bots-ia-whatsapp/600/400",
+      "imageUrl": "https://images.unsplash.com/photo-1625167256638-f47df21d8be7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaGF0JTIwYnViYmxlc3xlbnwwfHx8fDE3NjIwMjE0NTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "chat bubbles"
+    },
+    {
+      "id": "seguidor-de-linha-real",
+      "description": "Foto real do protótipo seguidor de linha com Arduino.",
+      "imageUrl": "https://images.unsplash.com/photo-1742767069929-0c663150b164?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb2JvdCUyMGNhciUyMGFyZHVpbm98ZW58MHx8fHwxNzYyMDk3NTY2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "robot car arduino"
     }
   ]
 }
