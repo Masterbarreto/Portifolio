@@ -10,7 +10,7 @@ export default function Footer() {
             <Github className="h-5 w-5" />
             <span className="sr-only">GitHub</span>
           </a>
-          <a href="https://www.linkedin.com/in/pedro-henrique-vieira-barreto-2b7433281/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+          <a href="https://www.linkedin.com/in/pedro-henrique-vieira-barreto-9b6440314" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
             <Linkedin className="h-5 w-5" />
             <span className="sr-only">LinkedIn</span>
           </a>

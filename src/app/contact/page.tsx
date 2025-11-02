@@ -26,7 +26,7 @@ export default function ContactPage() {
         <div className="md:col-span-2 flex flex-col justify-center space-y-6">
             <h3 className="text-xl font-bold font-headline text-center md:text-left">Outras formas de contato</h3>
             <Button asChild variant="outline" size="lg" className="justify-start">
-                <Link href="https://www.linkedin.com/in/pedro-henrique-vieira-barreto-2b7433281/" target="_blank">
+                <Link href="https://www.linkedin.com/in/pedro-henrique-vieira-barreto-9b6440314" target="_blank">
                     <Linkedin className="mr-3 h-5 w-5 text-primary"/>
                     LinkedIn
                 </Link>

@@ -61,7 +61,7 @@ Para clonar e executar este projeto em sua máquina, siga os passos abaixo:
 
 ## 📬 Contato
 
-- **LinkedIn:** [Pedro Henrique Vieira Barreto](https://www.linkedin.com/in/pedro-henrique-vieira-barreto-2b7433281/)
+- **LinkedIn:** [Pedro Henrique Vieira Barreto](https://www.linkedin.com/in/pedro-henrique-vieira-barreto-9b6440314/)
 - **GitHub:** [@MasterBarreto](https://github.com/MasterBarreto)
 
 Obrigado por visitar!
