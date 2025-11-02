@@ -13,7 +13,22 @@ export const MATERIAS: Materia[] = [
         title: 'Linguagens',
         description: 'Nesta área entram as competências ligadas à comunicação, expressão, interpretação, cultura e corpo.',
         subjects: [
-            { slug: 'portugues', title: 'Português' },
+            { 
+                slug: 'portugues', 
+                title: 'Português',
+                content: {
+                    title: 'Análise de "Dom Casmurro"',
+                    description: 'Um estudo aprofundado sobre a obra de Machado de Assis, explorando a narrativa não confiável de Bentinho e o mistério de Capitu.',
+                    imageUrl: 'https://picsum.photos/seed/dom-casmurro/1080/720',
+                    imageAlt: 'Livro antigo',
+                    items: [
+                        'Contexto histórico e literário do Realismo no Brasil.',
+                        'Análise dos personagens principais: Bentinho, Capitu e Escobar.',
+                        'O papel do ciúme e da dúvida como elementos centrais da trama.',
+                        'Discussão sobre as diferentes interpretações do final da obra.'
+                    ]
+                }
+            },
             { slug: 'ingles', title: 'Inglês' },
             { slug: 'artes', title: 'Artes' },
             { slug: 'educacao-fisica', title: 'Educação Física' }
@@ -24,7 +39,22 @@ export const MATERIAS: Materia[] = [
         title: 'Matemática',
         description: 'Fundamentos de lógica, álgebra e resolução de problemas.',
         subjects: [
-            { slug: 'matematica-1', title: 'Matemática I' },
+            { 
+                slug: 'matematica-1', 
+                title: 'Matemática I',
+                content: {
+                    title: 'Explorando Funções Trigonométricas',
+                    description: 'Uma visão geral sobre seno, cosseno e tangente, e como elas se aplicam em problemas do mundo real.',
+                    imageUrl: 'https://picsum.photos/seed/trigonometry/1080/720',
+                    imageAlt: 'Gráfico de funções trigonométricas',
+                    items: [
+                        'Definição do círculo trigonométrico e suas propriedades.',
+                        'Gráficos das funções seno, cosseno e tangente.',
+                        'Resolução de equações e inequações trigonométricas.',
+                        'Aplicações em física, como em movimentos harmônicos simples.'
+                    ]
+                }
+            },
             { slug: 'matematica-2', title: 'Matemática II' },
         ]
     },
@@ -34,7 +64,22 @@ export const MATERIAS: Materia[] = [
         description: 'Estudo de biologia, física e química.',
         subjects: [
             { slug: 'biologia', title: 'Biologia' },
-            { slug: 'fisica', title: 'Física' },
+            { 
+                slug: 'fisica', 
+                title: 'Física',
+                content: {
+                    title: 'Leis de Newton',
+                    description: 'Os princípios fundamentais da mecânica clássica que descrevem o movimento dos corpos.',
+                    imageUrl: 'https://picsum.photos/seed/newton-laws/1080/720',
+                    imageAlt: 'Maçã caindo de uma árvore',
+                    items: [
+                        'Primeira Lei de Newton: O princípio da inércia.',
+                        'Segunda Lei de Newton: A relação entre força, massa e aceleração (F=ma).',
+                        'Terceira Lei de Newton: O princípio da ação e reação.',
+                        'Aplicações práticas em problemas de dinâmica e estática.'
+                    ]
+                }
+            },
             { slug: 'quimica', title: 'Química' },
         ]
     },
@@ -43,7 +88,22 @@ export const MATERIAS: Materia[] = [
         title: 'Ciências Humanas',
         description: 'Análise de história, geografia, sociologia e filosofia.',
         subjects: [
-            { slug: 'historia', title: 'História' },
+            { 
+                slug: 'historia', 
+                title: 'História',
+                content: {
+                    title: 'A Revolução Francesa',
+                    description: 'Um marco na história ocidental que abalou as estruturas do absolutismo e deu início à Idade Contemporânea.',
+                    imageUrl: 'https://picsum.photos/seed/french-revolution/1080/720',
+                    imageAlt: 'Pintura da Revolução Francesa',
+                    items: [
+                        'Contexto social, político e econômico da França pré-revolucionária.',
+                        'As fases da revolução: Assembleia Nacional, Convenção e Diretório.',
+                        'O legado da revolução: direitos humanos, cidadania e o fim do Antigo Regime.',
+                        'A ascensão de Napoleão Bonaparte e suas consequências.'
+                    ]
+                }
+            },
             { slug: 'geografia', title: 'Geografia' },
             { slug: 'sociologia', title: 'Sociologia' },
             { slug: 'filosofia', title: 'Filosofia' },
@@ -56,7 +116,22 @@ export const MATERIAS: Materia[] = [
         subjects: [
             { slug: 'redes', title: 'Redes e Infraestrutura' },
             { slug: 'programacao', title: 'Programação' },
-            { slug: 'hardware', title: 'Hardware e Eletrônica' },
+            { 
+                slug: 'hardware', 
+                title: 'Hardware e Eletrônica',
+                content: {
+                    title: 'Anotações da Aula de Eletrônica',
+                    description: 'Um resumo sobre os componentes e circuitos utilizados no projeto do robô seguidor de linha.',
+                    imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhcmR1aW5vJTIwY2lyY3VpdHxlbnwwfHx8fDE3NjIxODAzNTV8MA&ixlib=rb-4.1.0&fm=jpg&w=1080&h=720&fit=crop',
+                    imageAlt: 'Circuito Arduino',
+                    items: [
+                        'Arduino Uno: O cérebro do robô, responsável por processar os dados dos sensores e controlar os motores.',
+                        'Sensor de Infravermelho (TCRT5000): Utilizado para detectar a linha preta no chão. Ele emite luz infravermelha e mede a reflexão.',
+                        'Driver de Motor (Ponte H L298N): Controla a direção e a velocidade dos dois motores DC.',
+                        'Motores DC com Caixa de Redução: Fornecem o movimento para as rodas do robô.'
+                    ]
+                }
+            },
         ]
     }
 ]

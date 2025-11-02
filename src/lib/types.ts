@@ -32,9 +32,18 @@ export interface Certificate {
   credentialUrl?: string;
 }
 
+export interface SubjectContent {
+    title: string;
+    description: string;
+    imageUrl: string;
+    imageAlt: string;
+    items: string[];
+}
+
 export interface Subject {
     slug: string;
     title: string;
+    content?: SubjectContent;
 }
   
 export interface Materia {

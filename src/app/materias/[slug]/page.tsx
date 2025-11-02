@@ -7,6 +7,43 @@ import { Button } from "@/components/ui/button";
 import { BookOpen } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
+import type { SubjectContent } from "@/lib/types";
+
+const SubjectContentDisplay = ({ content }: { content: SubjectContent }) => {
+    return (
+        <section className="mt-12 max-w-3xl mx-auto">
+            <Card className="h-full">
+                <CardHeader>
+                    <CardTitle className="flex items-center gap-3">
+                        <BookOpen className="h-6 w-6 text-primary" />
+                        {content.title}
+                    </CardTitle>
+                    <CardDescription>
+                        {content.description}
+                    </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                    <div className="aspect-video relative rounded-md overflow-hidden">
+                        <Image
+                            src={content.imageUrl}
+                            alt={content.imageAlt}
+                            fill
+                            className="object-cover"
+                        />
+                    </div>
+                    <div>
+                        <h4 className="font-bold text-lg">Pontos Principais</h4>
+                        <ul className="list-disc list-inside text-muted-foreground text-sm mt-2 space-y-1">
+                            {content.items.map((item, index) => (
+                                <li key={index}>{item}</li>
+                            ))}
+                        </ul>
+                    </div>
+                </CardContent>
+            </Card>
+        </section>
+    )
+}
  
 export default function MateriaPage() {
     const params = useParams();
@@ -21,6 +58,8 @@ export default function MateriaPage() {
     const handleSubjectClick = (subjectSlug: string) => {
         setSelectedSubject(prev => prev === subjectSlug ? null : subjectSlug);
     };
+
+    const currentSubject = materia.subjects.find(s => s.slug === selectedSubject);
 
     return (
         <div className="container mx-auto px-4 py-16 md:py-24">
@@ -56,36 +95,15 @@ export default function MateriaPage() {
                 </Card>
             </section>
 
-            {slug === 'iot' && selectedSubject === 'hardware' && (
+            {currentSubject && currentSubject.content && (
+                <SubjectContentDisplay content={currentSubject.content} />
+            )}
+
+            {currentSubject && !currentSubject.content && (
                 <section className="mt-12 max-w-3xl mx-auto">
-                    <Card className="h-full">
-                        <CardHeader>
-                            <CardTitle className="flex items-center gap-3">
-                                <BookOpen className="h-6 w-6 text-primary" />
-                                Anotações da Aula de Eletrônica
-                            </CardTitle>
-                            <CardDescription>
-                                Um resumo sobre os componentes e circuitos utilizados no projeto do robô seguidor de linha.
-                            </CardDescription>
-                        </CardHeader>
-                        <CardContent className="space-y-4">
-                            <div className="aspect-video relative rounded-md overflow-hidden">
-                                <Image
-                                    src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhcmR1aW5vJTIwY2lyY3VpdHxlbnwwfHx8fDE3NjIxODAzNTV8MA&ixlib=rb-4.1.0&fm=jpg&w=1080&h=720&fit=crop"
-                                    alt="Circuito Arduino"
-                                    fill
-                                    className="object-cover"
-                                />
-                            </div>
-                            <div>
-                                <h4 className="font-bold text-lg">Componentes Principais</h4>
-                                <ul className="list-disc list-inside text-muted-foreground text-sm mt-2 space-y-1">
-                                    <li><b>Arduino Uno:</b> O cérebro do robô, responsável por processar os dados dos sensores e controlar os motores.</li>
-                                    <li><b>Sensor de Infravermelho (TCRT5000):</b> Utilizado para detectar a linha preta no chão. Ele emite luz infravermelha e mede a reflexão.</li>
-                                    <li><b>Driver de Motor (Ponte H L298N):</b> Controla a direção e a velocidade dos dois motores DC.</li>
-                                    <li><b>Motores DC com Caixa de Redução:</b> Fornecem o movimento para as rodas do robô.</li>
-                                </ul>
-                            </div>
+                    <Card>
+                        <CardContent className="p-6">
+                            <p className="text-muted-foreground text-center">Ainda não há anotações para esta disciplina.</p>
                         </CardContent>
                     </Card>
                 </section>
