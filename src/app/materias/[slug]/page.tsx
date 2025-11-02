@@ -1,46 +1,29 @@
-import { MATERIAS, PROJECTS } from "@/lib/data";
+'use client';
+
+import { MATERIAS } from "@/lib/data";
 import { notFound } from "next/navigation";
-import { Card, CardHeader, CardTitle, CardContent, CardDescription, CardFooter } from "@/components/ui/card";
-import type { Metadata, ResolvingMetadata } from 'next'
+import { Card, CardHeader, CardTitle, CardContent, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Github, Bot, ArrowRight, BookOpen } from "lucide-react";
+import { BookOpen } from "lucide-react";
 import Image from "next/image";
+import { useState } from "react";
  
 type Props = {
   params: { slug: string }
 }
  
-export async function generateMetadata(
-  { params }: Props,
-  parent: ResolvingMetadata
-): Promise<Metadata> {
-  const materia = MATERIAS.find(m => m.slug === params.slug);
- 
-  if (!materia) {
-    return {
-        title: "Matéria não encontrada"
-    }
-  }
- 
-  return {
-    title: `${materia.title} | MasterDev Portfolio`,
-    description: `Detalhes sobre a matéria de ${materia.title}.`,
-  }
-}
-
-export function generateStaticParams() {
-    return MATERIAS.map((materia) => ({
-      slug: materia.slug,
-    }))
-}
-
 export default function MateriaPage({ params }: { params: { slug: string } }) {
+    const [selectedSubject, setSelectedSubject] = useState<string | null>(null);
     const materia = MATERIAS.find(m => m.slug === params.slug);
 
     if (!materia) {
         notFound();
     }
+
+    const handleSubjectClick = (slug: string) => {
+        setSelectedSubject(prev => prev === slug ? null : slug);
+    };
 
     return (
         <div className="container mx-auto px-4 py-16 md:py-24">
@@ -60,19 +43,23 @@ export default function MateriaPage({ params }: { params: { slug: string } }) {
                     <CardContent>
                        <div className="flex flex-wrap gap-4">
                          {materia.subjects.map(subject => (
-                            <Button key={subject.slug} asChild variant="default">
-                                <Link href={`/materias/${materia.slug}/${subject.slug}`}>
-                                    {subject.title}
-                                </Link>
+                            <Button 
+                                key={subject.slug} 
+                                variant={selectedSubject === subject.slug ? "default" : "outline"}
+                                onClick={() => handleSubjectClick(subject.slug)}
+                            >
+                                {subject.title}
                             </Button>
                          ))}
                        </div>
-                       <p className="mt-6 text-sm text-muted-foreground">O conteúdo detalhado para cada disciplina será adicionado aqui em breve.</p>
+                       {!selectedSubject && (
+                            <p className="mt-6 text-sm text-muted-foreground">Selecione uma disciplina para ver o conteúdo.</p>
+                       )}
                     </CardContent>
                 </Card>
             </section>
 
-            {params.slug === 'iot' && (
+            {params.slug === 'iot' && selectedSubject === 'hardware' && (
                 <section className="mt-12 max-w-3xl mx-auto">
                     <Card className="h-full">
                         <CardHeader>
