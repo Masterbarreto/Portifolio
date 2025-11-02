@@ -2,44 +2,21 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Atom, BrainCircuit, Calculator, Globe, Languages } from "lucide-react";
 import type { Metadata } from 'next';
 import Link from "next/link";
+import { MATERIAS } from "@/lib/data";
+import React from "react";
 
 export const metadata: Metadata = {
   title: 'Matérias | MasterDev Portfolio',
   description: 'Áreas de estudo e projetos de Pedro Henrique durante o ensino médio técnico.',
 };
 
-const materias = [
-    {
-        title: 'Linguagens',
-        description: 'Exploração de linguagens, comunicação e literatura.',
-        icon: <Languages className="h-8 w-8 text-primary" />,
-        href: '#'
-    },
-    {
-        title: 'Matemática',
-        description: 'Fundamentos de lógica, álgebra e resolução de problemas.',
-        icon: <Calculator className="h-8 w-8 text-primary" />,
-        href: '#'
-    },
-    {
-        title: 'Ciências da Natureza',
-        description: 'Estudo de biologia, física e química.',
-        icon: <Atom className="h-8 w-8 text-primary" />,
-        href: '#'
-    },
-    {
-        title: 'Ciências Humanas',
-        description: 'Análise de história, geografia, sociologia e filosofia.',
-        icon: <Globe className="h-8 w-8 text-primary" />,
-        href: '#'
-    },
-    {
-        title: 'IOT',
-        description: 'Projetos e aprendizados em Internet das Coisas.',
-        icon: <BrainCircuit className="h-8 w-8 text-primary" />,
-        href: '#'
-    }
-]
+const materiaIcons: { [key: string]: React.ReactElement } = {
+    'linguagens': <Languages className="h-8 w-8 text-primary" />,
+    'matematica': <Calculator className="h-8 w-8 text-primary" />,
+    'ciencias-da-natureza': <Atom className="h-8 w-8 text-primary" />,
+    'ciencias-humanas': <Globe className="h-8 w-8 text-primary" />,
+    'iot': <BrainCircuit className="h-8 w-8 text-primary" />,
+};
 
 export default function MateriasPage() {
   return (
@@ -53,11 +30,11 @@ export default function MateriasPage() {
 
       <section className="mt-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {materias.map((materia, index) => (
-                <Link href={materia.href} key={index}>
+            {MATERIAS.map((materia) => (
+                <Link href={`/materias/${materia.slug}`} key={materia.slug}>
                     <Card className="h-full hover:border-primary transition-colors flex flex-col items-center text-center p-6">
                         <div className="p-4 bg-card-foreground/5 rounded-full mb-4">
-                            {materia.icon}
+                            {materiaIcons[materia.slug]}
                         </div>
                         <CardHeader>
                             <CardTitle>{materia.title}</CardTitle>

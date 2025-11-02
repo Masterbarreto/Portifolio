@@ -7,6 +7,34 @@ export const NAV_LINKS = [
   { href: '/materias', label: 'Matérias' },
 ];
 
+export const MATERIAS = [
+    {
+        slug: 'linguagens',
+        title: 'Linguagens',
+        description: 'Exploração de linguagens, comunicação e literatura.',
+    },
+    {
+        slug: 'matematica',
+        title: 'Matemática',
+        description: 'Fundamentos de lógica, álgebra e resolução de problemas.',
+    },
+    {
+        slug: 'ciencias-da-natureza',
+        title: 'Ciências da Natureza',
+        description: 'Estudo de biologia, física e química.',
+    },
+    {
+        slug: 'ciencias-humanas',
+        title: 'Ciências Humanas',
+        description: 'Análise de história, geografia, sociologia e filosofia.',
+    },
+    {
+        slug: 'iot',
+        title: 'IOT',
+        description: 'Projetos e aprendizados em Internet das Coisas.',
+    }
+]
+
 export const SKILLS: Skill[] = [
   // Backend
   { name: 'Node.js', category: 'Linguagens e Frameworks', proficiency: 'Experiência principal em APIs REST, integração e automação.', icon: 'SiNodedotjs' },

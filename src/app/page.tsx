@@ -3,44 +3,18 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { ArrowRight, Code, FileText, Send, Star, Atom, BrainCircuit, Calculator, Globe, Languages } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { PROJECTS, SKILLS } from '@/lib/data';
+import { PROJECTS, SKILLS, MATERIAS } from '@/lib/data';
 import Skills from '@/components/skills';
 import ProjectCard from '@/components/project-card';
 import { Badge } from '@/components/ui/badge';
 
-const materias = [
-    {
-        title: 'Linguagens',
-        description: 'Exploração de linguagens, comunicação e literatura.',
-        icon: <Languages className="h-8 w-8 text-primary" />,
-        href: '/materias'
-    },
-    {
-        title: 'Matemática',
-        description: 'Fundamentos de lógica, álgebra e resolução de problemas.',
-        icon: <Calculator className="h-8 w-8 text-primary" />,
-        href: '/materias'
-    },
-    {
-        title: 'Ciências da Natureza',
-        description: 'Estudo de biologia, física e química.',
-        icon: <Atom className="h-8 w-8 text-primary" />,
-        href: '/materias'
-    },
-    {
-        title: 'Ciências Humanas',
-        description: 'Análise de história, geografia, sociologia e filosofia.',
-        icon: <Globe className="h-8 w-8 text-primary" />,
-        href: '/materias'
-    },
-    {
-        title: 'IOT',
-        description: 'Projetos e aprendizados em Internet das Coisas.',
-        icon: <BrainCircuit className="h-8 w-8 text-primary" />,
-        href: '/materias'
-    }
-]
-
+const materiaIcons: { [key: string]: React.ReactElement } = {
+    'linguagens': <Languages className="h-8 w-8 text-primary" />,
+    'matematica': <Calculator className="h-8 w-8 text-primary" />,
+    'ciencias-da-natureza': <Atom className="h-8 w-8 text-primary" />,
+    'ciencias-humanas': <Globe className="h-8 w-8 text-primary" />,
+    'iot': <BrainCircuit className="h-8 w-8 text-primary" />,
+};
 
 export default function Home() {
   const featuredProjects = PROJECTS.slice(0, 3);
@@ -98,11 +72,11 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mt-12">
-              {materias.map((materia, index) => (
-                  <Link href={materia.href} key={index}>
+              {MATERIAS.map((materia) => (
+                  <Link href={`/materias/${materia.slug}`} key={materia.slug}>
                       <Card className="h-full hover:border-primary transition-colors flex flex-col items-center text-center p-6">
                           <div className="p-4 bg-card-foreground/5 rounded-full mb-4">
-                              {materia.icon}
+                              {materiaIcons[materia.slug]}
                           </div>
                           <CardHeader>
                               <CardTitle>{materia.title}</CardTitle>
