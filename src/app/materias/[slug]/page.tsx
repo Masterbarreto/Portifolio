@@ -4,7 +4,8 @@ import { Card, CardHeader, CardTitle, CardContent, CardDescription, CardFooter }
 import type { Metadata, ResolvingMetadata } from 'next'
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Github, Bot, ArrowRight } from "lucide-react";
+import { Github, Bot, ArrowRight, BookOpen } from "lucide-react";
+import Image from "next/image";
  
 type Props = {
   params: { slug: string }
@@ -36,7 +37,6 @@ export function generateStaticParams() {
 
 export default function MateriaPage({ params }: { params: { slug: string } }) {
     const materia = MATERIAS.find(m => m.slug === params.slug);
-    const iotProject = PROJECTS.find(p => p.id === 'seguidor-de-linha');
 
     if (!materia) {
         notFound();
@@ -72,31 +72,38 @@ export default function MateriaPage({ params }: { params: { slug: string } }) {
                 </Card>
             </section>
 
-            {params.slug === 'iot' && iotProject && (
+            {params.slug === 'iot' && (
                 <section className="mt-12 max-w-3xl mx-auto">
-                   <Link href={`/projects/${iotProject.id}`}>
-                        <Card className="h-full hover:border-primary transition-colors">
-                            <CardHeader>
-                                <CardTitle className="flex items-center gap-3">
-                                    <Bot className="h-6 w-6 text-primary" />
-                                    Atividade Prática em Destaque
-                                </CardTitle>
-                                <CardDescription>
-                                    Exemplo de projeto prático desenvolvido na área de IoT.
-                                </CardDescription>
-                            </CardHeader>
-                            <CardContent>
-                                <h4 className="font-bold text-lg">{iotProject.title}</h4>
-                                <p className="text-muted-foreground text-sm mt-1 line-clamp-3">{iotProject.longDescription}</p>
-                            </CardContent>
-                            <CardFooter>
-                                <p className="text-sm text-primary font-semibold w-full flex items-center">
-                                    Ver detalhes da atividade
-                                    <ArrowRight className="ml-2 h-4 w-4" />
-                                </p>
-                            </CardFooter>
-                        </Card>
-                    </Link>
+                    <Card className="h-full">
+                        <CardHeader>
+                            <CardTitle className="flex items-center gap-3">
+                                <BookOpen className="h-6 w-6 text-primary" />
+                                Anotações da Aula de Eletrônica
+                            </CardTitle>
+                            <CardDescription>
+                                Um resumo sobre os componentes e circuitos utilizados no projeto do robô seguidor de linha.
+                            </CardDescription>
+                        </CardHeader>
+                        <CardContent className="space-y-4">
+                            <div className="aspect-video relative rounded-md overflow-hidden">
+                                <Image
+                                    src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhcmR1aW5vJTIwY2lyY3VpdHxlbnwwfHx8fDE3NjIxODAzNTV8MA&ixlib=rb-4.1.0&fm=jpg&w=1080&h=720&fit=crop"
+                                    alt="Circuito Arduino"
+                                    fill
+                                    className="object-cover"
+                                />
+                            </div>
+                            <div>
+                                <h4 className="font-bold text-lg">Componentes Principais</h4>
+                                <ul className="list-disc list-inside text-muted-foreground text-sm mt-2 space-y-1">
+                                    <li><b>Arduino Uno:</b> O cérebro do robô, responsável por processar os dados dos sensores e controlar os motores.</li>
+                                    <li><b>Sensor de Infravermelho (TCRT5000):</b> Utilizado para detectar a linha preta no chão. Ele emite luz infravermelha e mede a reflexão.</li>
+                                    <li><b>Driver de Motor (Ponte H L298N):</b> Controla a direção e a velocidade dos dois motores DC.</li>
+                                    <li><b>Motores DC com Caixa de Redução:</b> Fornecem o movimento para as rodas do robô.</li>
+                                </ul>
+                            </div>
+                        </CardContent>
+                    </Card>
                 </section>
             )}
         </div>
