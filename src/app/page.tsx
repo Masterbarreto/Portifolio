@@ -1,10 +1,8 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Download, Github, Linkedin, Briefcase, User, BookOpen, BrainCircuit, Code, MessageCircle, FlaskConical, Atom, Cpu } from 'lucide-react';
+import { User, BookOpen, MessageCircle, FlaskConical, Atom, BrainCircuit, Cpu } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { SKILLS } from '@/lib/data';
-import Skills from '@/components/skills';
 
 const cardSections = [
     {
@@ -23,25 +21,25 @@ const cardSections = [
         icon: <MessageCircle className="h-6 w-6 text-primary" />,
         title: "Linguagens",
         description: "Português, Inglês, Artes, Educação Física...",
-        href: "/projects"
+        href: "/projects" // Pode ser ajustado para uma página específica
     },
     {
         icon: <FlaskConical className="h-6 w-6 text-primary" />,
         title: "Matemática",
         description: "Álgebra, Geometria, Estatística, Lógica...",
-        href: "/projects"
+        href: "/projects" // Pode ser ajustado para uma página específica
     },
     {
         icon: <Atom className="h-6 w-6 text-primary" />,
         title: "Ciências da Natureza",
         description: "Física, Química e Biologia.",
-        href: "/projects"
+        href: "/projects" // Pode ser ajustado para uma página específica
     },
     {
         icon: <BrainCircuit className="h-6 w-6 text-primary" />,
         title: "Ciências Humanas",
         description: "História, Geografia, Filosofia, Sociologia.",
-        href: "/projects"
+        href: "/projects" // Pode ser ajustado para uma página específica
     },
     {
         icon: <Cpu className="h-6 w-6 text-primary" />,
@@ -51,11 +49,19 @@ const cardSections = [
     },
 ];
 
-
 export default function Home() {
   return (
     <div className="container mx-auto px-4 py-16 md:py-24">
       <section className="text-center mb-16">
+        <div className="flex justify-center mb-8">
+            <Image
+                src="https://picsum.photos/seed/profile-main/150/150"
+                alt="Pedro Henrique Vieira Barreto"
+                width={150}
+                height={150}
+                className="rounded-full object-cover border-4 border-primary/20 shadow-lg"
+            />
+        </div>
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
           Bem-vindo ao meu site. 👋
         </h1>
