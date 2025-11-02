@@ -53,8 +53,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body className={cn(inter.variable, spaceGrotesk.variable, 'font-body bg-background text-foreground antialiased')}>
+    <html lang="en">
+      <body className={cn(inter.variable, spaceGrotesk.variable, 'font-body bg-gradient-to-br from-blue-100 to-white text-foreground antialiased')}>
         <div className="flex min-h-screen flex-col">
           <Header />
           <main className="flex-grow">{children}</main>
