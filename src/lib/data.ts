@@ -3,6 +3,7 @@ import type { Skill, Project, TimelineEvent, Certificate } from './types';
 export const NAV_LINKS = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'Sobre Mim' },
+  { href: '/curriculo', label: 'Currículo' },
   { href: '/materias', label: 'Matérias' },
 ];
 
