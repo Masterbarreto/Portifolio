@@ -57,10 +57,10 @@ export default function AboutPage() {
       
       <div className="max-w-3xl mx-auto space-y-8 text-lg text-muted-foreground">
         <p>
-          Sou um estudante técnico em Internet das Coisas (IoT) apaixonado por resolver problemas através da tecnologia. Minha jornada começou com uma curiosidade insaciável por hardware no primeiro ano, evoluiu para a complexidade das redes no segundo, e culminou na arte da programação no terceiro ano.
+          Tenho 17 anos e sou estudante técnico em Internet das Coisas (IoT), apaixonado por resolver problemas através da tecnologia. Minha jornada me levou ao desenvolvimento backend, onde busco uma oportunidade como estagiário para aplicar e aprimorar minhas habilidades em Node.js e TypeScript.
         </p>
         <p>
-          Hoje, meu foco está no desenvolvimento backend, onde me especializo na criação de APIs robustas, na automação de processos e na exploração do vasto potencial da inteligência artificial. Tenho grande interesse em Cloud, IA e DevOps, áreas que vejo como pilares para a construção de soluções escaláveis e inovadoras.
+          Meu foco é a criação de APIs robustas, a automação de processos e a exploração do vasto potencial da inteligência artificial. Tenho grande interesse em Cloud, IA e DevOps, áreas que vejo como pilares para a construção de soluções escaláveis e inovadoras.
         </p>
       </div>
 

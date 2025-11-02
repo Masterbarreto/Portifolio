@@ -3,7 +3,7 @@ export type SkillCategory = 'Linguagens e Frameworks' | 'Bancos de Dados' | 'Fer
 export interface Skill {
   name: string;
   category: SkillCategory;
-  proficiency: string; // e.g., "Advanced", "Intermediate", "Familiar"
+  proficiency: string;
   icon: string;
 }
 

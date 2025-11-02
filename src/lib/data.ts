@@ -10,19 +10,18 @@ export const NAV_LINKS = [
 export const SKILLS: Skill[] = [
   // Backend
   { name: 'Node.js', category: 'Linguagens e Frameworks', proficiency: 'Experiência principal em APIs REST, integração e automação.', icon: 'SiNodedotjs' },
-  { name: 'Python', category: 'Linguagens e Frameworks', proficiency: 'Usado para scripts de automação e projetos de IA.', icon: 'SiPython' },
-  { name: 'Spring Boot', category: 'Linguagens e Frameworks', proficiency: 'Conhecimento básico a intermediário de projetos acadêmicos.', icon: 'SiSpringboot' },
+  { name: 'TypeScript', category: 'Linguagens e Frameworks', proficiency: 'Usado para desenvolvimento backend com Node.js.', icon: 'SiTypescript' },
+  { name: 'Python', category: 'Linguagens e Frameworks', proficiency: 'Usado para scripts de automação e projetos de robótica.', icon: 'SiPython' },
+  { name: 'Spring Boot', category: 'Linguagens e Frameworks', proficiency: 'Conhecimento em desenvolvimento de APIs.', icon: 'SiSpringboot' },
   
   // Frontend
   { name: 'React.js', category: 'Linguagens e Frameworks', proficiency: 'Construção de interfaces para projetos pessoais e acadêmicos.', icon: 'SiReact' },
+  { name: 'React Native', category: 'Linguagens e Frameworks', proficiency: 'Desenvolvimento de aplicativos mobile com Expo.', icon: 'SiReact' },
   { name: 'JavaScript', category: 'Linguagens e Frameworks', proficiency: 'Linguagem principal para desenvolvimento web.', icon: 'SiJavascript' },
-  { name: 'CSS3', category: 'Linguagens e Frameworks', proficiency: 'Estilização e design de interfaces web.', icon: 'SiCss3' },
-  { name: 'HTML5', category: 'Linguagens e Frameworks', proficiency: 'Estruturação semântica de páginas web.', icon: 'SiHtml5' },
   
   // Database
   { name: 'PostgreSQL', category: 'Bancos de Dados', proficiency: 'Banco de dados principal para projetos backend.', icon: 'SiPostgresql' },
   { name: 'MySQL', category: 'Bancos de Dados', proficiency: 'Experiência em ambientes acadêmicos e projetos.', icon: 'SiMysql' },
-  { name: 'MongoDB', category: 'Bancos de Dados', proficiency: 'Utilizado em projetos que requerem flexibilidade NoSQL.', icon: 'SiMongodb' },
   
   // DevOps & Infra
   { name: 'Docker', category: 'DevOps e CI/CD', proficiency: 'Containerização de aplicações Node.js para desenvolvimento e deploy.', icon: 'SiDocker' },
@@ -34,6 +33,7 @@ export const SKILLS: Skill[] = [
   { name: 'Git', category: 'Ferramentas', proficiency: 'Versionamento de código.', icon: 'SiGit' },
   { name: 'GitHub', category: 'Ferramentas', proficiency: 'Plataforma de colaboração e CI/CD.', icon: 'SiGithub' },
   { name: 'Figma', category: 'Ferramentas', proficiency: 'Prototipagem e design de interfaces.', icon: 'SiFigma' },
+  { name: 'Expo', category: 'Ferramentas', proficiency: 'Framework para desenvolvimento de apps React Native.', icon: 'SiExpo' },
 ];
 
 export const PROJECTS: Project[] = [
@@ -52,7 +52,7 @@ export const PROJECTS: Project[] = [
     title: 'Seguidor de Linha Robótica',
     description: 'Protótipo em C++ com sensores para competição de robótica.',
     longDescription: 'Este projeto foi desenvolvido para competições de robótica, onde o desafio era criar um robô autônomo capaz de seguir uma linha preta em uma pista branca. O protótipo foi construído utilizando C++ para a programação do microcontrolador e sensores de infravermelho para a detecção da linha, com foco em otimização de velocidade e precisão.',
-    stack: ['C++', 'Hardware', 'Robótica'],
+    stack: ['C++', 'Hardware', 'Robótica', 'Arduino'],
     imageUrl: 'https://picsum.photos/seed/seguidor-de-linha/600/400',
     imageHint: 'robot line',
     githubUrl: 'https://github.com/MasterBarreto/seguidor-de-linha'
