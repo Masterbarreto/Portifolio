@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 const ContributionHeatmap = () => {
     const [days, setDays] = useState<{ level: number; date: string }[]>([]);
+    const [monthLabels, setMonthLabels] = useState<{name: string, weekIndex: number}[]>([]);
 
     useEffect(() => {
         const endDate = new Date();
@@ -30,6 +31,23 @@ const ContributionHeatmap = () => {
             });
         }
         setDays(dayArray);
+
+        const months = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
+        const newMonthLabels = [];
+        let lastMonth = -1;
+    
+        for (let i = 0; i < 53; i++) {
+            const dayIndex = i * 7;
+            if (dayArray[dayIndex]) {
+                const date = new Date(dayArray[dayIndex].date);
+                const month = date.getMonth();
+                if (month !== lastMonth) {
+                    newMonthLabels.push({ name: months[month], weekIndex: i });
+                    lastMonth = month;
+                }
+            }
+        }
+        setMonthLabels(newMonthLabels);
     }, []);
 
     const getColor = (level: number) => {
@@ -44,25 +62,7 @@ const ContributionHeatmap = () => {
     };
 
     const weekDays = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
-    const months = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
     
-    // Create month labels
-    const monthLabels = [];
-    let lastMonth = -1;
-
-    for (let i = 0; i < 53; i++) {
-        const dayIndex = i * 7;
-        if (days[dayIndex]) {
-            const date = new Date(days[dayIndex].date);
-            const month = date.getMonth();
-            if (month !== lastMonth) {
-                monthLabels.push({ name: months[month], weekIndex: i });
-                lastMonth = month;
-            }
-        }
-    }
-
-
     return (
         <TooltipProvider>
             <div className="flex gap-2 text-xs text-muted-foreground overflow-x-auto p-2">
@@ -73,8 +73,8 @@ const ContributionHeatmap = () => {
                 </div>
                 <div className="flex flex-col">
                     <div className="flex gap-[2px] h-4">
-                        {monthLabels.map(label => (
-                             <div key={label.name} style={{ marginLeft: `${label.weekIndex === 0 ? 0 : (12)}px` }}>{label.name}</div>
+                        {monthLabels.map((label, index) => (
+                             <div key={`${label.name}-${index}`} style={{ marginLeft: `${label.weekIndex === 0 ? 0 : (12)}px` }}>{label.name}</div>
                         ))}
                     </div>
                     <div className="grid grid-flow-col grid-rows-7 gap-[2px]">
