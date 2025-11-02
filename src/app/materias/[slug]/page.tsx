@@ -9,20 +9,17 @@ import { BookOpen } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
  
-type Props = {
-  params: { slug: string }
-}
- 
 export default function MateriaPage({ params }: { params: { slug: string } }) {
+    const { slug } = params;
     const [selectedSubject, setSelectedSubject] = useState<string | null>(null);
-    const materia = MATERIAS.find(m => m.slug === params.slug);
+    const materia = MATERIAS.find(m => m.slug === slug);
 
     if (!materia) {
         notFound();
     }
 
-    const handleSubjectClick = (slug: string) => {
-        setSelectedSubject(prev => prev === slug ? null : slug);
+    const handleSubjectClick = (subjectSlug: string) => {
+        setSelectedSubject(prev => prev === subjectSlug ? null : subjectSlug);
     };
 
     return (
@@ -59,7 +56,7 @@ export default function MateriaPage({ params }: { params: { slug: string } }) {
                 </Card>
             </section>
 
-            {params.slug === 'iot' && selectedSubject === 'hardware' && (
+            {slug === 'iot' && selectedSubject === 'hardware' && (
                 <section className="mt-12 max-w-3xl mx-auto">
                     <Card className="h-full">
                         <CardHeader>
