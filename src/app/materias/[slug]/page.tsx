@@ -1,16 +1,16 @@
 'use client';
 
 import { MATERIAS } from "@/lib/data";
-import { notFound } from "next/navigation";
+import { notFound, useParams } from "next/navigation";
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import { BookOpen } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
  
-export default function MateriaPage({ params }: { params: { slug: string } }) {
-    const { slug } = params;
+export default function MateriaPage() {
+    const params = useParams();
+    const slug = params.slug as string;
     const [selectedSubject, setSelectedSubject] = useState<string | null>(null);
     const materia = MATERIAS.find(m => m.slug === slug);
 
