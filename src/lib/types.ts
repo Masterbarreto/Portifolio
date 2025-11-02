@@ -31,3 +31,15 @@ export interface Certificate {
   date: string;
   credentialUrl?: string;
 }
+
+export interface Subject {
+    slug: string;
+    title: string;
+}
+  
+export interface Materia {
+    slug: string;
+    title: string;
+    description: string;
+    subjects: Subject[];
+}

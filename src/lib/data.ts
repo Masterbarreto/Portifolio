@@ -1,4 +1,4 @@
-import type { Skill, Project, TimelineEvent, Certificate } from './types';
+import type { Skill, Project, TimelineEvent, Certificate, Materia } from './types';
 
 export const NAV_LINKS = [
   { href: '/', label: 'Home' },
@@ -7,31 +7,57 @@ export const NAV_LINKS = [
   { href: '/materias', label: 'Matérias' },
 ];
 
-export const MATERIAS = [
+export const MATERIAS: Materia[] = [
     {
         slug: 'linguagens',
         title: 'Linguagens',
-        description: 'Exploração de linguagens, comunicação e literatura.',
+        description: 'Nesta área entram as competências ligadas à comunicação, expressão, interpretação, cultura e corpo.',
+        subjects: [
+            { slug: 'portugues', title: 'Português' },
+            { slug: 'ingles', title: 'Inglês' },
+            { slug: 'artes', title: 'Artes' },
+            { slug: 'educacao-fisica', title: 'Educação Física' }
+        ]
     },
     {
         slug: 'matematica',
         title: 'Matemática',
         description: 'Fundamentos de lógica, álgebra e resolução de problemas.',
+        subjects: [
+            { slug: 'matematica-1', title: 'Matemática I' },
+            { slug: 'matematica-2', title: 'Matemática II' },
+        ]
     },
     {
         slug: 'ciencias-da-natureza',
         title: 'Ciências da Natureza',
         description: 'Estudo de biologia, física e química.',
+        subjects: [
+            { slug: 'biologia', title: 'Biologia' },
+            { slug: 'fisica', title: 'Física' },
+            { slug: 'quimica', title: 'Química' },
+        ]
     },
     {
         slug: 'ciencias-humanas',
         title: 'Ciências Humanas',
         description: 'Análise de história, geografia, sociologia e filosofia.',
+        subjects: [
+            { slug: 'historia', title: 'História' },
+            { slug: 'geografia', title: 'Geografia' },
+            { slug: 'sociologia', title: 'Sociologia' },
+            { slug: 'filosofia', title: 'Filosofia' },
+        ]
     },
     {
         slug: 'iot',
         title: 'IOT',
         description: 'Projetos e aprendizados em Internet das Coisas.',
+        subjects: [
+            { slug: 'redes', title: 'Redes e Infraestrutura' },
+            { slug: 'programacao', title: 'Programação' },
+            { slug: 'hardware', title: 'Hardware e Eletrônica' },
+        ]
     }
 ]
 
