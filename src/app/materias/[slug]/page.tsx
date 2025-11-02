@@ -1,9 +1,10 @@
-import { MATERIAS } from "@/lib/data";
+import { MATERIAS, PROJECTS } from "@/lib/data";
 import { notFound } from "next/navigation";
-import { Card, CardHeader, CardTitle, CardContent, CardDescription } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle, CardContent, CardDescription, CardFooter } from "@/components/ui/card";
 import type { Metadata, ResolvingMetadata } from 'next'
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Github, Bot } from "lucide-react";
  
 type Props = {
   params: { slug: string }
@@ -35,6 +36,7 @@ export function generateStaticParams() {
 
 export default function MateriaPage({ params }: { params: { slug: string } }) {
     const materia = MATERIAS.find(m => m.slug === params.slug);
+    const iotProject = PROJECTS.find(p => p.id === 'seguidor-de-linha');
 
     if (!materia) {
         notFound();
@@ -69,6 +71,34 @@ export default function MateriaPage({ params }: { params: { slug: string } }) {
                     </CardContent>
                 </Card>
             </section>
+
+            {params.slug === 'iot' && iotProject && (
+                <section className="mt-12 max-w-3xl mx-auto">
+                    <Card>
+                        <CardHeader>
+                            <CardTitle className="flex items-center gap-3">
+                                <Bot className="h-6 w-6 text-primary" />
+                                Atividade Prática em Destaque
+                            </CardTitle>
+                            <CardDescription>
+                                Exemplo de projeto prático desenvolvido na área de IoT.
+                            </CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                            <h4 className="font-bold text-lg">{iotProject.title}</h4>
+                            <p className="text-muted-foreground text-sm mt-1">{iotProject.longDescription}</p>
+                        </CardContent>
+                        <CardFooter>
+                            <Button asChild variant="outline" className="w-full">
+                                <Link href={iotProject.githubUrl} target="_blank">
+                                    <Github className="mr-2 h-4 w-4" />
+                                    Ver no GitHub
+                                </Link>
+                            </Button>
+                        </CardFooter>
+                    </Card>
+                </section>
+            )}
         </div>
     );
 }
