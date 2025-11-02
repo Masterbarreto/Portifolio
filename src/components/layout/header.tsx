@@ -2,7 +2,7 @@
 
 import { NAV_LINKS } from '@/lib/data';
 import { cn } from '@/lib/utils';
-import { Menu } from 'lucide-react';
+import { Code, Menu } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
@@ -18,8 +18,9 @@ const NavLink = ({ href, label, className, onClick }: { href: string; label: str
       href={href}
       onClick={onClick}
       className={cn(
-        'rounded-md px-3 py-2 text-sm font-medium transition-colors',
-        isActive ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-primary/5 hover:text-primary',
+        'relative rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary',
+        'after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 after:content-[""]',
+        isActive ? 'text-primary after:scale-x-100' : 'hover:after:scale-x-50',
         className
       )}
     >
@@ -32,11 +33,12 @@ export default function Header() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-white/80 backdrop-blur-sm">
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur-sm">
       <div className="container flex h-16 items-center">
         <div className="mr-auto flex items-center">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <span className="font-bold text-lg">Meu Portal de Estudos</span>
+            <Code className="h-6 w-6 text-primary" />
+            <span className="font-bold text-lg">MasterDev</span>
           </Link>
         </div>
 
@@ -57,7 +59,8 @@ export default function Header() {
             <SheetContent side="left">
               <div className="flex flex-col space-y-2 p-4">
                 <Link href="/" className="mb-4 flex items-center space-x-2">
-                    <span className="font-bold text-lg">Meu Portal de Estudos</span>
+                    <Code className="h-6 w-6 text-primary" />
+                    <span className="font-bold text-lg">MasterDev</span>
                 </Link>
                 {NAV_LINKS.map((link) => (
                   <NavLink

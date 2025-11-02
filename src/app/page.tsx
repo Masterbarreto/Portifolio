@@ -1,89 +1,92 @@
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { User, BookOpen, MessageCircle, FlaskConical, Atom, BrainCircuit, Cpu } from 'lucide-react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { ArrowRight, Code, FileText, Send, Star } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
-
-const cardSections = [
-    {
-        icon: <User className="h-6 w-6 text-primary" />,
-        title: "Sobre mim",
-        description: "Quem sou, meus interesses, meus objetivos.",
-        href: "/about"
-    },
-    {
-        icon: <BookOpen className="h-6 w-6 text-primary" />,
-        title: "Currículo",
-        description: "Formação, cursos, projetos e experiências.",
-        href: "/about"
-    },
-    {
-        icon: <MessageCircle className="h-6 w-6 text-primary" />,
-        title: "Linguagens",
-        description: "Português, Inglês, Artes, Educação Física...",
-        href: "/projects" // Pode ser ajustado para uma página específica
-    },
-    {
-        icon: <FlaskConical className="h-6 w-6 text-primary" />,
-        title: "Matemática",
-        description: "Álgebra, Geometria, Estatística, Lógica...",
-        href: "/projects" // Pode ser ajustado para uma página específica
-    },
-    {
-        icon: <Atom className="h-6 w-6 text-primary" />,
-        title: "Ciências da Natureza",
-        description: "Física, Química e Biologia.",
-        href: "/projects" // Pode ser ajustado para uma página específica
-    },
-    {
-        icon: <BrainCircuit className="h-6 w-6 text-primary" />,
-        title: "Ciências Humanas",
-        description: "História, Geografia, Filosofia, Sociologia.",
-        href: "/projects" // Pode ser ajustado para uma página específica
-    },
-    {
-        icon: <Cpu className="h-6 w-6 text-primary" />,
-        title: "IOT",
-        description: "Projetos com sensores, automação e conectividade.",
-        href: "/projects"
-    },
-];
+import { PROJECTS, SKILLS } from '@/lib/data';
+import Skills from '@/components/skills';
+import ProjectCard from '@/components/project-card';
+import { Badge } from '@/components/ui/badge';
 
 export default function Home() {
+  const featuredProjects = PROJECTS.slice(0, 3);
+  const featuredSkills = SKILLS.slice(0, 7);
+
   return (
-    <div className="container mx-auto px-4 py-16 md:py-24">
-      <section className="text-center mb-16">
-        <div className="flex justify-center mb-8">
-            <Image
-                src="https://picsum.photos/seed/profile-main/150/150"
-                alt="Pedro Henrique Vieira Barreto"
-                width={150}
-                height={150}
-                className="rounded-full object-cover border-4 border-primary/20 shadow-lg"
-            />
+    <div className="flex flex-col">
+      <section className="container mx-auto grid grid-cols-1 items-center gap-12 px-4 py-24 md:grid-cols-2 md:py-32">
+        <div className="flex flex-col items-start gap-6">
+          <Badge variant="default" className="py-2 px-4 text-sm">
+            Backend Developer | IoT Student
+          </Badge>
+          <h1 className="text-4xl font-bold md:text-5xl lg:text-6xl">
+            Pedro Henrique Vieira Barreto
+          </h1>
+          <p className="max-w-xl text-lg text-muted-foreground">
+            Estudante de IoT e desenvolvedor com foco em APIs, automação e
+            inteligência artificial. Transformando ideias em soluções
+            eficientes e escaláveis.
+          </p>
+          <div className="flex gap-4">
+            <Button asChild size="lg">
+              <Link href="/projects">
+                Meus Projetos <ArrowRight className="ml-2" />
+              </Link>
+            </Button>
+            <Button asChild variant="outline" size="lg">
+              <Link href="/contact">
+                Contato <Send className="ml-2" />
+              </Link>
+            </Button>
+          </div>
         </div>
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          Bem-vindo ao meu site. 👋
-        </h1>
-        <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-          Aqui você encontra informações sobre mim, meu currículo, e as áreas do saber do Ensino Médio (Linguagens, Matemática, Ciências da Natureza, Ciências Humanas), além de um espaço dedicado a projetos de IOT (Internet das Coisas).
-        </p>
+        <div className="relative flex h-full min-h-[300px] items-center justify-center">
+          <Image
+            src="https://picsum.photos/seed/home-hero/600/600"
+            alt="Hero Image"
+            width={450}
+            height={450}
+            priority
+            className="rounded-full object-cover shadow-2xl shadow-primary/20"
+            data-ai-hint="abstract developer illustration"
+          />
+        </div>
       </section>
 
-      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        {cardSections.map((card, index) => (
-            <Link href={card.href} key={index}>
-                <Card className="h-full hover:border-primary transition-all duration-300 transform hover:scale-105 bg-white/80 backdrop-blur-sm">
-                    <CardHeader className="flex flex-row items-center gap-4">
-                        {card.icon}
-                        <CardTitle>{card.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <CardDescription>{card.description}</CardDescription>
-                    </CardContent>
-                </Card>
-            </Link>
-        ))}
+      <section id="skills" className="w-full bg-card py-20 md:py-28">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold md:text-4xl">
+              Minha Caixa de Ferramentas
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+              As tecnologias e ferramentas que utilizo para construir projetos.
+            </p>
+          </div>
+          <div className="mx-auto mt-12 max-w-5xl">
+            <Skills skills={SKILLS} />
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" className="container mx-auto px-4 py-20 md:py-28">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold md:text-4xl">Projetos em Destaque</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
+            Uma seleção de projetos que demonstram minhas habilidades e
+            interesses.
+          </p>
+        </div>
+        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {featuredProjects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
+        </div>
+        <div className="mt-12 text-center">
+          <Button asChild variant="outline">
+            <Link href="/projects">Ver Todos os Projetos</Link>
+          </Button>
+        </div>
       </section>
     </div>
   );
