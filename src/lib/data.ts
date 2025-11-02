@@ -3,8 +3,8 @@ import type { Skill, Project, TimelineEvent, Certificate } from './types';
 export const NAV_LINKS = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'Sobre Mim' },
-  { href: '/projects', label: 'Projetos' },
-  { href: '/contact', label: 'Contato' },
+  { href: '/about', label: 'Currículo' },
+  { href: '/materias', label: 'Matérias' },
 ];
 
 export const SKILLS: Skill[] = [
@@ -70,30 +70,30 @@ export const PROJECTS: Project[] = [
 ];
 
 export const TIMELINE: TimelineEvent[] = [
-    {
-        year: 'Ago 2025 - Atual',
-        title: 'Estagiário de Backend',
-        institution: 'Yamamoto',
-        description: 'Desenvolvimento de integrações de APIs, automação de fluxos com webhooks e prototipagem de agentes de IA para atendimento.',
-    },
-    {
-        year: '2023 - 2026',
-        title: 'Ensino Médio Técnico em IoT',
-        institution: 'Senac São Paulo',
-        description: 'Formação em T.I. passando por hardware (1º ano), redes (2º ano) e programação (3º ano). Atividades: Teatro, robótica, oficina de foguetes, GML.',
-    },
-    {
-        year: '2025',
-        title: 'Participação em Olimpíadas',
-        institution: 'OBI, OBA & MOBFOG',
-        description: 'Participação na Olimpíada Brasileira de Informática (OBI), na Olimpíada Brasileira de Astronomia e Astronáutica (OBA) e na Mostra Brasileira de Foguetes (MOBFOG).',
-    },
-    {
-        year: '2023 - 2025',
-        title: 'Atividades Extracurriculares',
-        institution: 'Robótica, Teatro, Oficina de Foguetes',
-        description: 'Engajamento em diversas atividades que estimularam a criatividade, o trabalho em equipe e a aplicação prática de conhecimentos técnicos.',
-    }
+  {
+    year: 'Ago 2025 - Atual',
+    title: 'Estagiário de Backend',
+    institution: 'Yamamoto',
+    description: 'Atuo no desenvolvimento de soluções voltadas para integração de APIs, automação de fluxos e criação de agentes inteligentes para atendimento via WhatsApp e outras plataformas. Minha rotina envolve: Suporte no desenvolvimento e manutenção de integrações entre sistemas (CRM, ERP, mensageria etc.); Implementação de fluxos com webhooks e automações; Apoio na prototipagem e testes de agentes de IA para empresas clientes; Colaboração na documentação técnica e melhoria contínua das soluções. Estou inserido em um projeto estratégico de inovação em IA aplicada a atendimento e automação, dentro de um ambiente startup com cultura de aprendizado, colaboração e experimentação constante.',
+  },
+  {
+      year: '2023 - 2026',
+      title: 'Ensino Médio Técnico em IoT',
+      institution: 'Senac São Paulo',
+      description: 'Formação Técnica no SENAC (janeiro de 2023 - Janeiro de 2025): 1º Ano: Técnico em Assistência de Computadores, 2º Ano: Técnico em Redes e Infraestrutura, 3º Ano: Programação.',
+  },
+  {
+      year: '2025',
+      title: 'Participação em Olimpíadas',
+      institution: 'OBI, OBA & MOBFOG',
+      description: 'Participação na Olimpíada Brasileira de Informática (OBI), na Olimpíada Brasileira de Astronomia e Astronáutica (OBA) e na Mostra Brasileira de Foguetes (MOBFOG).',
+  },
+  {
+      year: '2023 - 2025',
+      title: 'Atividades Extracurriculares',
+      institution: 'Robótica, Teatro, Oficina de Foguetes',
+      description: 'Engajamento em diversas atividades que estimularam a criatividade, o trabalho em equipe e a aplicação prática de conhecimentos técnicos.',
+  }
 ];
 
 export const CERTIFICATIONS: Certificate[] = [
