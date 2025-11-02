@@ -57,10 +57,10 @@ export default function AboutPage() {
       
       <div className="max-w-3xl mx-auto space-y-8 text-lg text-muted-foreground">
         <p>
-          Tenho 17 anos e sou estudante técnico em Internet das Coisas (IoT), apaixonado por resolver problemas através da tecnologia. Minha jornada me levou ao desenvolvimento backend, onde busco uma oportunidade como estagiário para aplicar e aprimorar minhas habilidades em Node.js e TypeScript.
+          Olá, meu nome é Pedro, tenho 17 anos e sou um entusiasta da tecnologia, sempre em busca de novos desafios. Atualmente, estou cursando o ensino técnico em Internet das Coisas (IoT), uma área que me fascina pela capacidade de conectar o mundo físico ao digital.
         </p>
         <p>
-          Meu foco é a criação de APIs robustas, a automação de processos e a exploração do vasto potencial da inteligência artificial. Tenho grande interesse em Cloud, IA e DevOps, áreas que vejo como pilares para a construção de soluções escaláveis e inovadoras.
+          Desde cedo, a programação se tornou minha principal ferramenta para dar vida às ideias. Meu interesse natural por resolver quebra-cabeças me levou ao desenvolvimento backend, onde me divirto construindo a lógica e a estrutura que fazem as aplicações funcionarem.
         </p>
       </div>
 
@@ -114,10 +114,10 @@ export default function AboutPage() {
       </section>
 
       <section className="mt-20 text-center max-w-3xl mx-auto">
-        <h2 className="text-3xl font-bold mb-6">Visão de Futuro</h2>
+        <h2 className="text-3xl font-bold mb-6">Minha Motivação</h2>
         <BrainCircuit className="h-12 w-12 text-primary mx-auto mb-4"/>
         <p className="text-lg text-muted-foreground">
-            Acredito que a tecnologia é a maior alavanca para o progresso humano. Meu objetivo é estar na vanguarda da inovação, construindo sistemas inteligentes e automatizados que não apenas otimizem processos, mas que também criem novas possibilidades e gerem um impacto positivo na sociedade.
+            Acredito que a tecnologia é uma das ferramentas mais poderosas para a mudança. Meu objetivo é continuar aprendendo, criando e colaborando em projetos que não apenas resolvam problemas, mas que também tornem o dia a dia das pessoas um pouco melhor e mais interessante.
         </p>
       </section>
     </div>
