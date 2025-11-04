@@ -48,12 +48,13 @@ export default function Home() {
             </Button>
           </div>
         </div>
-        <div className="relative flex h-full min-h-[300px] items-center justify-center">
+        <div className="relative flex h-full min-h-[200px] items-center justify-center aspect-square md:aspect-auto">
           <Image
-            src="https://picsum.photos/seed/home-hero/600/600"
-            alt="Hero Image"
-            width={450}
+            src="https://i.ibb.co/b5WrTF1X/RC-5638.jpg"
+            alt="Profile photo"
+            width={350}
             height={450}
+            unoptimized
             priority
             className="rounded-full object-cover shadow-2xl shadow-primary/20"
             data-ai-hint="abstract developer illustration"
