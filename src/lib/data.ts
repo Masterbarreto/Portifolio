@@ -1,4 +1,21 @@
 import type { Skill, Project, TimelineEvent, Certificate, Materia } from './types';
+import GML from "../assets/GML.png"
+import Robotica from "../assets/Robotica.jpg"
+import WhtasApp from "../assets/WhtasApp.jpeg"
+import trovadorismo from "../assets/trovadorismo .png"
+import usAhug from "../assets/Us_Ahug.png"
+import Artes from "../assets/Artes.png"
+import EducacaoFisica from "../assets/EducacaoFisica.png"
+import mat from "../assets/matematica.png";
+import fisica from "../assets/fisica.png"
+import SensorDeAr from "../assets/Sensor de ar.jpg"
+import quimica from "../assets/ods.png"
+import senamun from "../assets/senamun.jpg"
+import ProjetoDeLei from "../assets/projetoDeLei.png"
+import historia from "../assets/Historia.png"
+import filosofia from "../assets/fiosofia.jpeg"
+import urna from "../assets/urnaEletronica.jpg"
+import progamação from "../assets/progamação.png"
 
 export const NAV_LINKS = [
   { href: '/', label: 'Home' },
@@ -8,79 +25,154 @@ export const NAV_LINKS = [
 ];
 
 export const MATERIAS: Materia[] = [
-    {
-        slug: 'linguagens',
-        title: 'Linguagens',
-        description: 'Nesta área entram as competências ligadas à comunicação, expressão, interpretação, cultura e corpo.',
-        subjects: [
-            { 
-                slug: 'portugues', 
-                title: 'Português',
-                content: {
-                    title: 'Análise de "Dom Casmurro"',
-                    description: 'Um estudo aprofundado sobre a obra de Machado de Assis, explorando a narrativa não confiável de Bentinho e o mistério de Capitu.',
-                    imageUrl: 'https://picsum.photos/seed/dom-casmurro/1080/720',
-                    imageAlt: 'Livro antigo',
-                    items: [
-                        'Contexto histórico e literário do Realismo no Brasil.',
-                        'Análise dos personagens principais: Bentinho, Capitu e Escobar.',
-                        'O papel do ciúme e da dúvida como elementos centrais da trama.',
-                        'Discussão sobre as diferentes interpretações do final da obra.'
-                    ]
-                }
-            },
-            { slug: 'ingles', title: 'Inglês' },
-            { slug: 'artes', title: 'Artes' },
-            { slug: 'educacao-fisica', title: 'Educação Física' }
-        ]
-    },
-    {
+  {
+    slug: 'linguagens',
+    title: 'Linguagens',
+    description: 'Nesta área entram as competências ligadas à comunicação, expressão, interpretação, cultura e corpo.',
+    subjects: [
+      {
+        slug: 'portugues',
+        title: 'Português',
+        content: {
+          title: 'Análise textual e leitura crítica (Revista LGG)',
+          description: 'Leituras e práticas de interpretação textual, produção escrita e análise literária com foco em argumentação, gêneros textuais e variação linguística, a partir de trechos e artigos selecionados na Revista LGG.',
+          imageUrl: trovadorismo,
+          imageAlt: 'Revista LGG — Português',
+          items: [
+            'Leitura crítica de artigos: identificar tese, argumentos e recursos persuasivos.',
+            'Gêneros textuais: características e estratégias de produção (editorial, resenha, ensaio).',
+            'Análise literária: leitura de contos e crônicas; foco em narrador, tempo e ponto de vista.',
+            'Ortografia e norma-padrão: revisão aplicada à produção de textos.',
+            'Produção de texto argumentativo com base em fontes (síntese e citação).'
+          ]
+        }
+      },
+      {
+        slug: 'ingles',
+        title: 'Inglês',
+        content: {
+          title: 'US? a hug',
+          description: 'Práticas de leitura em língua inglesa focadas em compreensão, vocabulário e interpretação aplicáveis a textos informativos e culturais.',
+          imageUrl: usAhug,
+          imageAlt: 'Reading & Communication',
+          items: [
+            'Every day during the break at SENAC, my friends and I have the same routine. We go to P1 to eat something, play truco, and enjoy other games. It’s not just about the food or the cards — it’s aboutthe laughs, the jokes, and thestories we share. Thesesimple moments becamespecial memories. Most ofthe time, it’s just me and theguys, talking abouteverything and nothing at thesame time.',
+          ]
+        }
+      },
+      {
+        slug: 'artes',
+        title: 'Artes',
+        content: {
+          title: 'Leitura de imagens e linguagem visual',
+          description: 'Exploração de imagens e recursos visuais presentes na Revista LGG para trabalhar interpretação, linguagem simbólica e produção visual.',
+          imageUrl:  Artes,
+          imageAlt: 'Artes — imagem editorial',
+          items: [
+            'Análise de elementos visuais: cor, forma e composição.',
+            'Interpretação de charge e ilustração editorial.',
+            'Produção: criar uma peça visual que comunique uma ideia/argumento.'
+          ]
+        }
+      },
+      {
+        slug: 'educacao-fisica',
+        title: 'Educação Física',
+        content: {
+          title: 'Saúde e bem estar',
+          description: 'Atividades práticas que relacionam movimento, saúde e trabalho em equipe.',
+          imageUrl: EducacaoFisica,
+          imageAlt: 'Educação Física',
+          items: [
+            'antioxidantes aliados ou vilões?',
+            'uso consiente dos antioxidantes'
+          ]
+        }
+      }
+    ]
+  },
+  {
+    slug: 'matematica',
+    title: 'Matemática',
+    description: 'Fundamentos de lógica, álgebra e resolução de problemas.',
+    subjects: [
+      {
         slug: 'matematica',
         title: 'Matemática',
-        description: 'Fundamentos de lógica, álgebra e resolução de problemas.',
-        subjects: [
-            { 
-                slug: 'matematica-1', 
-                title: 'Matemática I',
-                content: {
-                    title: 'Explorando Funções Trigonométricas',
-                    description: 'Uma visão geral sobre seno, cosseno e tangente, e como elas se aplicam em problemas do mundo real.',
-                    imageUrl: 'https://picsum.photos/seed/trigonometry/1080/720',
-                    imageAlt: 'Gráfico de funções trigonométricas',
-                    items: [
-                        'Definição do círculo trigonométrico e suas propriedades.',
-                        'Gráficos das funções seno, cosseno e tangente.',
-                        'Resolução de equações e inequações trigonométricas.',
-                        'Aplicações em física, como em movimentos harmônicos simples.'
-                    ]
-                }
-            },
-            { slug: 'matematica-2', title: 'Matemática II' },
-        ]
-    },
+        content: {
+          title: 'Explorando Funções Trigonométricas',
+          description: 'Uma visão geral sobre seno, cosseno e tangente, e como elas se aplicam em problemas do mundo real.',
+          imageUrl: mat,
+          imageAlt: 'Gráfico de funções trigonométricas',
+          items: [
+            'Definição do círculo trigonométrico e suas propriedades.',
+            'Gráficos das funções seno, cosseno e tangente.',
+            'Resolução de equações e inequações trigonométricas.',
+            'Aplicações em física, como em movimentos harmônicos simples.'
+          ]
+        }
+      }
+    ]
+  },
     {
         slug: 'ciencias-da-natureza',
         title: 'Ciências da Natureza',
         description: 'Estudo de biologia, física e química.',
         subjects: [
-            { slug: 'biologia', title: 'Biologia' },
-            { 
-                slug: 'fisica', 
-                title: 'Física',
-                content: {
-                    title: 'Leis de Newton',
-                    description: 'Os princípios fundamentais da mecânica clássica que descrevem o movimento dos corpos.',
-                    imageUrl: 'https://picsum.photos/seed/newton-laws/1080/720',
-                    imageAlt: 'Maçã caindo de uma árvore',
-                    items: [
-                        'Primeira Lei de Newton: O princípio da inércia.',
-                        'Segunda Lei de Newton: A relação entre força, massa e aceleração (F=ma).',
-                        'Terceira Lei de Newton: O princípio da ação e reação.',
-                        'Aplicações práticas em problemas de dinâmica e estática.'
-                    ]
-                }
+            {
+              slug: 'biologia',
+              title: 'Biologia',
+              content: {
+                title: 'Sensores de CO / CO2',
+                description: 'Estudo dos princípios e aplicações de sensores de monóxido de carbono (CO) e dióxido de carbono (CO2): tipos de sensores, funcionamento, leitura de sinais, calibração e uso em monitoramento da qualidade do ar.',
+                imageUrl: SensorDeAr,
+                imageAlt: 'Sensor e monitoramento de CO2',
+                items: [
+                  'Princípios de detecção: diferença entre sensores eletroquímicos, semicondutores (MQ series) e NDIR para CO2.',
+                  'Calibração e sensibilidade: como interpretar leituras e evitar falsos positivos/negativos.',
+                  'Integração com microcontroladores: aquisições, leitura analógica/digital e transmissão de dados.',
+                  'Aplicações práticas: monitoramento de qualidade do ar, segurança em ambientes fechados e uso em projetos de IoT.',
+                  'Atividade laboratorial sugerida: montar um protótipo simples com um sensor MQ (CO) ou um módulo NDIR (CO2) e registrar variações em diferentes condições.'
+                ]
+              }
             },
-            { slug: 'quimica', title: 'Química' },
+            {
+              slug: 'fisica',
+              title: 'Física Moderna',
+              content: {
+                title: 'Física Moderna — fundamentos e aplicações',
+                description: 'Estudo dos conceitos centrais da física do século XX: relatividade restrita, quantização de energia, dualidade onda-partícula e modelos atômicos, com foco em aplicações tecnológicas e experimentos históricos.',
+                imageUrl: fisica,
+                imageAlt: 'Conceitos de Física Moderna',
+                items: [
+                  'Efeito fotoelétrico: evidência da quantização da luz e introdução dos fótons.',
+                  'Modelo atômico e níveis de energia (Bohr): transições eletrônicas e espectros.',
+                  'Dualidade onda-partícula: conceitos básicos da mecânica quântica.',
+                  'Relatividade restrita: transformações de Lorentz, dilatação do tempo e equivalência massa-energia (E=mc²).',
+                  'Aplicações tecnológicas: semicondutores, lasers, espectroscopia e detectores.'
+                ]
+              }
+            },
+            {
+              slug: 'quimica',
+              title: 'Química',
+              content: {
+                title: 'Bancada Legislativa: ODS e Química Ambiental',
+                description: 'Atividade integrada de Linguagens e Ciências da Natureza focada na elaboração de propostas legislativas baseadas nos Objetivos de Desenvolvimento Sustentável (ODS), com ênfase em Saúde e Bem-Estar (ODS 3) e combate ao abuso de substâncias químicas. Integra pesquisa científica, direitos humanos e produção textual.',
+                imageUrl: quimica,
+                imageAlt: 'ODS e Agenda 2030',
+                items: [
+                  'Identidade da bancada legislativa: criação de nome, logotipo e identidade visual baseada no ODS sorteado (com técnicas de Pop Art).',
+                  'ODS 3 — Saúde e Bem-Estar: análise do item 3.5 (prevenção e tratamento do abuso de substâncias, drogas e álcool) e suas implicações químicas e sociais.',
+                  'Química das substâncias: estudo de compostos químicos presentes em drogas e álcool, mecanismos de ação no organismo e efeitos neuroquímicos.',
+                  'Proposta legislativa: elaboração de 1 projeto de lei baseado nas metas da Agenda 2030, articulando ciência, direitos humanos e políticas públicas.',
+                  'Parceria global: criação de 1 proposta de colaboração internacional para reforçar a prevenção e tratamento do abuso de substâncias (ODS 3.5).',
+                  'Campanha publicitária: divulgação do ODS por meio de vídeo de 30 segundos, slogans e propaganda em inglês.',
+                  'Cartilha informativa: compilação de pesquisas, propostas, fontes bibliográficas e relatórios individuais de participação (ficha técnica).',
+                  'Competências mobilizadas: pesquisa digital ética, linguagens científicas, análise crítica de informações, uso de TDIC e comunicação para públicos diversos.'
+                ]
+              }
+            },
         ]
     },
     {
@@ -92,21 +184,80 @@ export const MATERIAS: Materia[] = [
                 slug: 'historia', 
                 title: 'História',
                 content: {
-                    title: 'A Revolução Francesa',
-                    description: 'Um marco na história ocidental que abalou as estruturas do absolutismo e deu início à Idade Contemporânea.',
-                    imageUrl: 'https://picsum.photos/seed/french-revolution/1080/720',
-                    imageAlt: 'Pintura da Revolução Francesa',
-                    items: [
-                        'Contexto social, político e econômico da França pré-revolucionária.',
-                        'As fases da revolução: Assembleia Nacional, Convenção e Diretório.',
-                        'O legado da revolução: direitos humanos, cidadania e o fim do Antigo Regime.',
-                        'A ascensão de Napoleão Bonaparte e suas consequências.'
-                    ]
+                title: 'Dossiê Histórico — Guerra das Coreias (1950–1953)',
+                description: 'Produza um dossiê sintético (1–2 páginas) sobre a Guerra das Coreias, articulando contexto histórico, atores internacionais, cronologia essencial e impactos geopolíticos, com base em fontes confiáveis. Inclua uma seção de análise crítica conectando os desdobramentos ao cenário asiático contemporâneo.',
+                imageUrl: historia,
+                imageAlt: 'Guerra das Coreias — contexto histórico',
+                items: [
+                  'Antecedentes: ocupação japonesa, divisão no paralelo 38, surgimento de dois Estados (Coreia do Norte e Coreia do Sul).',
+                  'Atores e alianças: EUA/ONU, China, União Soviética — objetivos e estratégias militares.',
+                  'Cronologia essencial: invasão inicial, contraofensivas, estabilização e armistício de 1953.',
+                  'Impactos: militarização da península, fronteira desmilitarizada (DMZ), efeitos sobre civis e economia.',
+                  'Fontes e evidências: mapas, resoluções da ONU, dados demográficos e testemunhos históricos.',
+                  'Análise crítica: permanências e mudanças no Leste Asiático; conexões com segurança regional atual.',
+                  'Entregáveis: dossiê de 1–2 páginas com referências; IA apenas como apoio à pesquisa/organização.'
+                ]
                 }
             },
-            { slug: 'geografia', title: 'Geografia' },
-            { slug: 'sociologia', title: 'Sociologia' },
-            { slug: 'filosofia', title: 'Filosofia' },
+            {
+              slug: 'geografia',
+              title: 'Geografia',
+              content: {
+                title: 'SenaMUN — Dossiê Geopolítico e Humanitário: Faixa de Gaza',
+                description: 'Atividade da IV edição do SenaMUN focada em Geografia: produzir um dossiê curto (1–2 páginas) que sintetize o contexto territorial, os atores envolvidos e os desafios logísticos para a assistência humanitária na Faixa de Gaza, com propostas de ação viáveis.',
+                imageUrl: senamun,
+                imageAlt: 'Mapa geopolítico e logística humanitária',
+                items: [
+                  'Contexto territorial e demográfico: fronteiras, densidade populacional, infraestrutura crítica (água, energia, saúde).',
+                  'Atores e interesses: Egito, Israel, Autoridade Palestina, ONU e ONGs — convergências e tensões.',
+                  'Acesso e logística: corredores humanitários, pontos de passagem (ex.: Rafah), restrições e riscos de segurança.',
+                  'Indicadores humanitários: disponibilidade de água, eletricidade, atendimento médico e deslocamentos (fontes: OCHA/UNICEF/WHO).',
+                  'Panorama de resoluções e trégua: marcos recentes que impactam a entrada de ajuda e a proteção a civis.',
+                  'País delegado: prioridades estratégicas, linhas vermelhas e possíveis alianças no comitê.',
+                  'Propostas de ação: mecanismos de monitoramento, janelas de acesso, distribuição segura e coordenação logística com agências.',
+                  'Entregáveis: dossiê de 1–2 páginas com mapa anotado e referências confiáveis; uso de IA permitido apenas como apoio de pesquisa/organização.'
+                ]
+              }
+            },
+            {
+              slug: 'sociologia',
+              title: 'Sociologia',
+              content: {
+                title: 'Simulação Legislativa — Miniprojeto de Lei (LC 95)',
+                description: 'Em grupos de até 6 pessoas, elabore um esboço de proposta legislativa (1–2 páginas) seguindo a LC 95. Escolha um dos temas: Educação; Meio Ambiente, Clima e Sustentabilidade; Indústria, Comércio e Serviços; Saúde; Segurança e Gestão de Serviços Públicos; Regulação de Plataformas e Redes Sociais; Artistas e Direitos Autorais. Produto: esboço de Projeto de Lei conforme estrutura obrigatória.',
+                imageUrl: ProjetoDeLei,
+                imageAlt: 'Elaboração de projeto de lei em sala',
+                items: [
+                  'Formação de grupos: até 6 integrantes; escolha 1 tema da lista proposta.',
+                  'Produto: esboço de Projeto de Lei (1–2 páginas) em PDF ou Word.',
+                  'Estrutura obrigatória (LC 95): Ementa; Preâmbulo; Art. 1º (objetivo); Art. 2º (regras/direitos/deveres); Art. 3º (responsabilidades, fiscalização e sanções); Art. 4º (vigência).',
+                  'Justificativa (8–12 linhas): explique o problema, o objetivo da proposta e responda “Como a lei ajuda a melhorar essa situação?”.',
+                  'Critérios: clareza, fundamentação com fontes confiáveis, viabilidade e impacto social.',
+                  'Diretrizes éticas: IA apenas como apoio à pesquisa/organização; texto final autoral e referenciado.',
+                  'Referências: incluir fontes (leis, relatórios oficiais, artigos e notícias de credibilidade).',
+                  'Dica — tema Segurança: proponha integração entre órgãos, protocolos de iluminação e vigilância urbana, canais de denúncia, proteção de dados, indicadores de avaliação e controle social, respeitando competências legais.'
+                ]
+              }
+            },
+            {
+              slug: 'filosofia',
+              title: 'Filosofia',
+              content: {
+                title: 'Roda Viva — Guerra Fria: ética, poder e liberdade',
+                description: 'Atividade em formato de mesa redonda inspirada no programa Roda Viva. Em grupos, representem personagens/vozes da Guerra Fria para debater dilemas filosóficos: legitimidade do poder, liberdade vs. segurança, propaganda, verdade e responsabilidade moral dos Estados e indivíduos.',
+                imageUrl: filosofia,
+                imageAlt: 'Debate filosófico em mesa redonda',
+                items: [
+                  'Formação: grupos com papéis distintos (ex.: filósofo liberal, pensador marxista, diplomata, jornalista, cientista, cidadão).',
+                  'Guias de questões: poder e legitimidade; liberdade vs. segurança; propaganda e verdade; ciência e ética; responsabilidade individual/coletiva.',
+                  'Referências breves: Hobbes (soberania/segurança), Locke (direitos/liberdade), Mill (liberdade de expressão), Arendt (totalitarismo), Popper (sociedade aberta), Foucault (poder/saber).',
+                  'Roteiro do debate: abertura com posições iniciais; rodada cruzada de perguntas; dilema ético aplicado (ex.: corrida armamentista, espionagem, censura).',
+                  'Produto: síntese escrita de 1–2 páginas com as posições, argumentos centrais, pontos de convergência/divergência e referência às fontes.',
+                  'Ética acadêmica: IA apenas como apoio à organização; texto final autoral e referenciado.',
+                  'Opcional: anexar “ficha de personagem” (1 parágrafo) descrevendo visão de mundo e princípios do papel escolhido.'
+                ]
+              }
+            },
         ]
     },
     {
@@ -114,21 +265,39 @@ export const MATERIAS: Materia[] = [
         title: 'IOT',
         description: 'Projetos e aprendizados em Internet das Coisas.',
         subjects: [
-            { slug: 'redes', title: 'Redes e Infraestrutura' },
-            { slug: 'programacao', title: 'Programação' },
-            { 
-                slug: 'hardware', 
+            {
+                slug: 'programacao',
+                title: 'Programação',
+                content: {
+                    title: 'Desenvolvimento Web — Portfólio Pessoal',
+                    description: 'Projeto full-stack de construção de site portfólio pessoal usando Next.js, TypeScript, React e Tailwind CSS. Inclui estruturação de componentes, navegação, integração com dados estáticos/dinâmicos, deploy e boas práticas de UI/UX.',
+                    imageUrl: progamação,
+                    imageAlt: 'Código de desenvolvimento web',
+                    items: [
+                        'Arquitetura: App Router (Next.js 15), estrutura de pastas em src/app, páginas dinâmicas com [slug]/[id].',
+                        'Componentes reutilizáveis: header, footer, cards (projeto, matéria), timeline, formulário de contato.',
+                        'Estilização: Tailwind CSS + Radix UI (accordion, dialog, tabs, tooltip).',
+                        'Gerenciamento de dados: arrays tipados (TypeScript) em src/lib/data.ts; tipos em src/lib/types.ts.',
+                        'Imagens: Next/Image com remotePatterns para hospedagem externa; imports locais de assets.',
+                        'Deploy: Vercel com CI/CD via GitHub; configuração de domínios e analytics.',
+                        'Entregáveis: repositório Git público, README com instruções de instalação/execução, screenshots e link do site ao vivo.'
+                    ]
+                }
+            },
+            {
+                slug: 'hardware',
                 title: 'Hardware e Eletrônica',
                 content: {
-                    title: 'Anotações da Aula de Eletrônica',
-                    description: 'Um resumo sobre os componentes e circuitos utilizados no projeto do robô seguidor de linha.',
-                    imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhcmR1aW5vJTIwY2lyY3VpdHxlbnwwfHx8fDE3NjIxODAzNTV8MA&ixlib=rb-4.1.0&fm=jpg&w=1080&h=720&fit=crop',
-                    imageAlt: 'Circuito Arduino',
+                    title: 'Projetos: Robô Seguidor de Linha e Urna Eletrônica',
+                    description: 'Resumo dos componentes e circuitos usados no robô seguidor de linha e proposta de protótipo de urna eletrônica com Arduino, botões, LEDs e validação de votos.',
+                    imageUrl:urna,
+                    imageAlt: 'Circuitos com Arduino',
                     items: [
-                        'Arduino Uno: O cérebro do robô, responsável por processar os dados dos sensores e controlar os motores.',
-                        'Sensor de Infravermelho (TCRT5000): Utilizado para detectar a linha preta no chão. Ele emite luz infravermelha e mede a reflexão.',
-                        'Driver de Motor (Ponte H L298N): Controla a direção e a velocidade dos dois motores DC.',
-                        'Motores DC com Caixa de Redução: Fornecem o movimento para as rodas do robô.'
+                        'Urna: Matriz de botões (candidatos) e botão CONFIRMA; LEDs para feedback.',
+                        'Urna: Display (LCD/I2C ou OLED) para mensagens de voto e resultado.',
+                        'Urna: EEPROM para registrar votos; rotina de inicialização e apuração segura.',
+                        'Urna: Regras de validação — um voto por ciclo, confirmação obrigatória, cancelamento (CORRIGE).',
+                        'Urna: Diagrama de circuito e pseudocódigo: leitura de botões, debounce, estado da votação, persistência e apuração.'
                     ]
                 }
             },
@@ -172,7 +341,7 @@ export const PROJECTS: Project[] = [
     description: 'App de otimização de compras em lanchonete escolar.',
     longDescription: 'Desenvolvimento de um aplicativo para otimizar o tempo dos alunos nas filas das lanchonetes. O projeto envolveu gerenciamento, arquitetura, criação de regras de serviço, implementação de APIs, uso de banco de dados PostgreSQL, conteinerização com Docker e design de UX/UI. Recebeu mentoria do Centro de Inovação Tecnológica do SENAC.',
     stack: ['Node.js', 'PostgreSQL', 'REST API', 'Docker', 'UX/UI Design'],
-    imageUrl: 'https://picsum.photos/seed/guarda-meu-lanche/600/400',
+    imageUrl: GML,
     imageHint: 'mobile app food',
     githubUrl: 'https://github.com/MasterBarreto/Guarda-Meu-Lanche'
   },
@@ -182,7 +351,7 @@ export const PROJECTS: Project[] = [
     description: 'Protótipo em C++ com sensores para competição de robótica.',
     longDescription: 'Este projeto foi desenvolvido para competições de robótica, onde o desafio era criar um robô autônomo capaz de seguir uma linha preta em uma pista branca. O protótipo foi construído utilizando C++ para a programação do microcontrolador e sensores de infravermelho para a detecção da linha, com foco em otimização de velocidade e precisão.',
     stack: ['C++', 'Hardware', 'Robótica', 'Arduino'],
-    imageUrl: 'https://picsum.photos/seed/real-robot/600/400',
+    imageUrl: Robotica,
     imageHint: 'robot car arduino',
     githubUrl: 'https://github.com/MasterBarreto/seguidor-de-linha'
   },
@@ -192,7 +361,7 @@ export const PROJECTS: Project[] = [
     description: 'Experimentos com automação de atendimento via WhatsApp.',
     longDescription: 'Uma série de experimentos e projetos focados na criação de bots de atendimento para WhatsApp utilizando Node.js e diversas APIs de inteligência artificial. O objetivo era explorar as possibilidades de automação de conversas, triagem de clientes e respostas a perguntas frequentes, visando melhorar a eficiência do atendimento digital.',
     stack: ['Node.js', 'IA', 'APIs', 'WhatsApp'],
-    imageUrl: 'https://picsum.photos/seed/bots-ia-whatsapp/600/400',
+    imageUrl: WhtasApp,
     imageHint: 'chat bubbles',
     githubUrl: 'https://github.com/MasterBarreto/whatsapp-bots'
   }
