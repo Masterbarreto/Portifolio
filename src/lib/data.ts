@@ -5,7 +5,7 @@ import WhtasApp from "../assets/WhtasApp.jpeg"
 import trovadorismo from "../assets/trovadorismo .png"
 import usAhug from "../assets/Us_Ahug.png"
 import Artes from "../assets/Artes.png"
-import EducacaoFisica from "../assets/EducacaoFisica.png"
+import EducacaoFisica from "../assets/educacaoFisica.png"
 import mat from "../assets/matematica.png";
 import fisica from "../assets/fisica.png"
 import SensorDeAr from "../assets/Sensor de ar.jpg"

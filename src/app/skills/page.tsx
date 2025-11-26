@@ -1,4 +1,4 @@
-import SkillsGrid from "@/components/skills-grid";
+import SkillsGrid from "@/components/skills";
 import { SKILLS } from "@/lib/data";
 import type { Metadata } from 'next';
 
